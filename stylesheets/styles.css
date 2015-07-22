@@ -542,6 +542,8 @@ body {
   background: -o-linear-gradient(#2a2a29, #1c1c1c);
   background: -ms-linear-gradient(#2a2a29, #1c1c1c);
   background: linear-gradient(#2a2a29, #1c1c1c);
+  background-image:url("../images/bgi_2.jpg");
+  background-size: 1920px 1080px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -794,10 +796,11 @@ section #title {
 }
 section #title h1 {
   font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: normal;
+  font-weight: bolder;
   font-size: 40px;
   text-align: center;
   line-height: 36px;
+  color: #8ea4cc;
 }
 section #title p {
   color: #d7cfbe;
