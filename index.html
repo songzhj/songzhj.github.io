@@ -1,58 +1,76 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Songzhj Blog</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-dark.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <script src="https://code.createjs.com/easeljs-0.8.1.min.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-  </head>
-  <body>
-      <canvas id="canvas" width="1920px" height="860px" style="position:absolute;z-index:-1"></canvas>
-      <script src="javascripts/canvas_mouse_kt.js"></script>
-
-  <div id="header">
-          <!-- 最上层浮动,留出添加按钮等 -->
-      </div><!-- end header -->
-
-    <div class="wrapper">
-
-      <section>
-        <div id="title">
-          <h1>Songzhj Blog</h1>
-          <p></p>
-          <hr>
-          <span class="credits right">Project maintained by <a href="https://github.com/songzhj">songzhj</a></span>
-        </div>
-        <h3>
-          this is a test blog
-        </h3>
-        <br/>
-        <p>I'm learning about web, and prepare to using github page to set up a static web.</p>
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-      </section>
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("CN-201507-20");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>         
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>songzhj个人简历</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<!--[if lt IE 9]>
+	  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" href="stylesheets/ie.css">
+	<![endif]-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+</head>
+<body>
+	<canvas id="cvs" width="1000px" height="1000px"></canvas>
+	<script type="text/javascript" src="./javascripts/canvas.js"></script>
+	<div class="header">
+		<h2>songzhj个人简历</h2>
+	</div>
+	<div class="body">
+		<div class="contact_info">
+			<div class="title">
+				<h2>联系方式：</h2>
+			</div>
+			<div class="content">
+				<ul>
+					<li>Email：jia@songzhj.com</li>
+					<li>QQ：1131293579</li>
+				</ul>
+			</div>
+		</div>
+		<div class="photo"><img src="./images/photo.jpg" alt="个人照片"></div>
+		<div class="my_info">
+			<div class="title">
+				<h2>个人信息：</h2>
+			</div>
+			<div class="content">
+				<ul>
+					<li>宋治佳 | 男 | 1994</li>
+					<li>本科 | 吉林大学软件工程(在读)</li>
+					<li>博客：<a href="http://blog.csdn.net/sz0hj" target="_blank">http://blog.csdn.net/sz0hj</a></li>
+					<li>Github：<a href="http://github.com/songzhj" target="_blank">http://github.com/songzhj</a></li>
+					<li>期望职位：Web前端</li>
+				</ul>
+			</div>
+		</div>
+		<div class="my_exp">
+			<div class="title">
+				<h2>个人经历：</h2>
+			</div>
+			<div class="content">
+				<div class="con_title">
+					<h3>学校：</h3>
+				</div>
+				<div class="con_content">
+					<ul>
+						<li>2014年10月获得三等奖学金。</li>
+						<li>2015年 5月获得“第六届蓝桥杯全国大赛”省赛 Java A组省级一等奖。</li>
+						<li>2015年 6月获得“第六届蓝桥杯全国大赛”决赛 Java A组全国三等奖。</li>
+					</ul>
+				</div>
+			</div>
+			 <div class="title">
+			 	<h2>项目经历：</h2>
+			 </div>
+			 <div class="content">
+			 	<ul>
+			 		<li>基于FUSE的加密云存储（项目进行中）：2015年5月进行"大学生创新计划"的参加筹备，6月项目申请成功，为期一年。在项目中，本人负责了OpenStack的搭建并参与了客户端的开发。由于是第一次进行完整的项目开发，在项目进行中体会到了团队开发和个人开发的差异，并逐渐适应了这种不同。在项目中遇到的各种问题，无论是上网寻找答案、寻求老师的帮助或是自己想出解决方案，都让我自身处理问题的能力得到了锻炼和提升。</li>
+			 	</ul>
+			 </div>
+		</div>
+	</div>
+</body>
 </html>
