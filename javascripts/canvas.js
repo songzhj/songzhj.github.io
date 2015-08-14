@@ -4,8 +4,8 @@ function draw () {
 	var height = cvs.getAttribute('height');
 	ctx.moveTo(710, 30);
 	ctx.lineTo(710, height);
-	ctx.moveTo(0, 456);
-	ctx.lineTo(1000, 456);
+	ctx.moveTo(0, 457);
+	ctx.lineTo(1000, 457);
 	ctx.strokeStyle = 'rgb(0, 0, 0)';
 	ctx.stroke();
 }
