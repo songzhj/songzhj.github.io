@@ -5,7 +5,7 @@
 }
 
 body {
-	background-color: #989797;
+	background-color: #CFDADC;
 }
 
 a {
@@ -31,7 +31,10 @@ a {
 .body {
 	width: auto;
 	padding-top: 60px;
-	padding-left: 30%;
+	/*padding-left: 10%;*/
+	float: left;
+	left: 35%;
+	position: relative;
 }
 
 .body .title {
@@ -43,16 +46,6 @@ a {
 	margin-left: 40px;
 }
 
-.photo img {
-	width: 150px;
-}
-
-.photo {
-	float: right;
-	margin-right: 30%;
-	margin-top: -30px;
-}
-
 li {
 	line-height: 25px;
 	max-width: 620px;
@@ -62,11 +55,4 @@ li {
 .content .con_content {
 	margin-top: 5px;
 	margin-left: 30px;
-}
-
-#cvs {
-	position: absolute;
-	z-index: -1;
-	width: 100%;
-	height: 1000px;
 }
