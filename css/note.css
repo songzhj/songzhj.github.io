@@ -1,0 +1,46 @@
+li p {
+	/*font-style:italic;*/
+	font-size: smaller;
+	margin-left:15px;
+}
+
+li table {
+	margin-left: 15px;
+	border-collapse: collapse;
+	border-style: solid;
+	border-width: 1px;
+	font-size: smaller;
+}
+
+li table td {
+	border-style: solid;
+	border-width: 1px;
+}
+
+ul {
+	padding-left: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+li {
+	padding-top: 5px;
+	font-size: larger;
+}
+
+.back {
+	position: fixed;
+	top: 90px;
+	left: 350px;
+}
+
+.back img {
+	border-radius: 12px;
+}
+
+.back img:hover {
+	-webkit-transform: scale(1.2, 1.2);
+	-ms-transform: scale(1.2, 1.2);
+	-o-transform: scale(1.2, 1.2);
+	transform: scale(1.2, 1.2);
+}

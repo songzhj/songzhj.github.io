@@ -5,54 +5,81 @@
 }
 
 body {
-	background-color: #CFDADC;
-}
-
-a {
-	text-decoration: none;
-	color: #000000;
+	background-color: #CCCCCF;
 }
 
 .header {
-	position: fixed;
 	height: 60px;
 	line-height: 60px;
 	width: 100%;
+    	background-color: #000000;
 	border-color: #606061;
 }
 
 .header h2 {
 	text-align: center;
-	background-color: #000000;
-	color: #7BB8EF;
-	font-family: sans-serif;
+	color: #7BBBEE;
+	font-family: "Comic Sans MS";
 }
 
 .body {
+	width:400px;
+	margin: 30px auto;
+	border-style: solid;
+ 	border-width:1px;
+ 	border-color: #555;
+ 	border-radius: 17px;
+ 	background-color: #DFDFDF;
+}
+
+.body .note h2 {
+  	color:#EEEEEE;
+  	text-align:left;
+  	padding-left:5px; 
+  	border-radius: 15px;
+  	background-color:#555;
+}
+
+.body .item {
 	width: auto;
-	padding-top: 60px;
-	/*padding-left: 10%;*/
-	float: left;
-	left: 35%;
-	position: relative;
+  	margin-left: 20px;
+  	line-height: 20px;
+  	font-size: 120%;
 }
 
-.body .title {
-	margin-top: 60px;
+.body .item:hover {
+	line-height: 40px;
+	font-size: 150%;
+	font-weight: bolder;
 }
 
-.body .content {
-	margin-top: 20px;
-	margin-left: 40px;
+.body .item a:link {
+	text-decoration: none;
+	color:black;
 }
 
-li {
-	line-height: 25px;
-	max-width: 620px;
-
+.body .item a:visited {
+	text-decoration: none;
+	color:black;
 }
 
-.content .con_content {
-	margin-top: 5px;
-	margin-left: 30px;
+.body .item a span {
+	font-size: smaller;
+}
+
+.toTop {
+	position:fixed;
+	bottom:15px;
+	right:370px;
+}
+
+.toTop img:hover {
+	-webkit-transform: scale(1.2, 1.2);
+	-ms-transform: scale(1.2, 1.2);
+	-o-transform: scale(1.2, 1.2);
+	transform: scale(1.2, 1.2);
+}
+
+.toTop img {
+	border-radius: 12px;
 }
