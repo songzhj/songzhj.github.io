@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>songzhj - js高级程序设计-chapter3</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/note.css">
+	<script type="text/javascript" src="../js/jquery-1.12.1.min.js"></script>
+	<script type="text/javascript" src="../js/scrollTop.js"></script>
+</head>
+<body>
+	<div class="header">	</div>
+	<div class="body">
+		<ul>
+			<li>严格模式<p>使用"user strict"启动严格模式.</p><p>有关于严格模式,可以参考<a href="http://www.ruanyifeng.com/blog/2013/01/javascript_strict_mode.html">阮一峰</a>的文章.</p></li>
+			<li>定义变量<p>定义变量时不使用var,这个变量会被定义为全局变量,但不推荐这么做,因为在局部作用域中定义全局变量很难维护.</p></li>
+			<li>typeof是一个操作符,不是函数</li>
+			<li>null和undefind <p>undefined是派生自null值的,因此null==undefind的值是true.</p> <p>如果定义的变量准备用于保存对象,那么最好将该变量初始化为null.</p></li>
+			<li>八进制字面量在严格模式下是无效的</li>
+			<li>ECMAScript数值范围<p>Number.MIN_VALUE和NUMBER.MAX_VALUE之间,超出这个范围会被转换成Infinity.</p><p>可以使用isFinite(x)函数来确定一个数x是否在范围内.</p></li>
+			<li>NaN <p>任何涉及到NaN的操作都会返回NaN</p><p>NaN与任何值都不等. NaN == NaN返回false.</p><p>可以使用IsNaN(x)来判断x是否"不是数值".</p></li>
+			<li>parseInt() <p>在使用parseInt()时应指名基数(函数的第二个参数,表示要转换的数的进制).</p></li>
+			<li>String类型<p>字符串的长度是字符串的属性而不是方法(.length)</p><p>toString()方法可以将数的进制作为参数,返回该数值相应进制的字符串.</p><p>对于不确定的null和undefind,可以使用String()来转换成字符串.</p></li>
+			<li>Object类型</li><p>Object的没个实例都有下列属性和方法:</p>
+				<ul>
+					<li>Constructor:保存着用于创建当前对象的函数</li>
+					<li>hasOwnProperty(propertyName):用于检查给定的属性在当前对象实例中是否存在</li>
+					<li>isProtorypeOf(object):	用于检查传入的对象是否是另一个对象的原形</li>
+					<li>propertyIsEnumerable(propertyName):用于检查给定的属性是否能够使用for-in语句来枚举</li>
+					<li>toLocaleString():返回对象的字符串表示,该字符串与执行环境的地区对应</li>
+					<li>toString():返回对象的字符串表示</li>
+					<li>valueOf():返回对象的字符串、数值或布尔值表示.通常与toString()返回值相同</li>
+				</ul>
+		</ul>
+	</div>
+	<div class="back"></div>
+	<div class="toTop"></div>
+</body>
+</html>

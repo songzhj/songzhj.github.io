@@ -1,6 +1,6 @@
-li p {
+ul p {
 	/*font-style:italic;*/
-	font-size: smaller;
+	font-size: medium;
 	margin-left:15px;
 	margin-right: 15px;
 }
@@ -18,15 +18,20 @@ li table td {
 	border-width: 1px;
 }
 
-ul {
+.body ul {
 	padding-left: 20px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
 
-li {
+.body li {
 	padding-top: 5px;
 	font-size: larger;
+}
+
+.body ul ul li {
+	margin-left: 10px;
+	font-size: medium;
 }
 
 .back {
