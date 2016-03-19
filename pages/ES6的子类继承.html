@@ -13,7 +13,21 @@
 	<div class="body">
 		<ul>
 			<li>ES6的子类继承</li>
-			<p></p>
+			<p>今天朋友在<a href="http://www.liaoxuefeng.com/">廖雪峰</a>的网站上学东西,发现里面的<a href="http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001458267339633fd3a83c597d04b5fb59f7d1f6792efb3000">示例</a>跑不过,来问我.</p>
+			<p>一开始我的代码是酱紫的:</p>
+			<p style="white-space:pre;">
+class Cat extends Animal {
+   	constructor(name) {
+        		super(name);
+    	}
+
+    	say() {
+        		return 'Hello, ' + name + '!';
+    	}
+}</p>
+			<p>然而,say()无论如何都返回的是'Hello, !'.这是为啥,疑惑了好长时间.</p>
+			<p>然后无意间把name换成了this.name, 就跑出了正常的结果.</p>
+			<p>写下来记录一下解决方法,顺便原因找到答案了再回来补上.</p>
 		</ul>
 	</div>
 	<div class="back"></div>
