@@ -1,0 +1,68 @@
+.container {
+	margin: 20px;
+	padding: 20px;
+	min-width: 650px;
+	background-color: #eee;
+}
+
+.container:after {
+	clear: both;
+	content: "";
+	display: block;
+}
+
+.container,
+.team-info,
+.introduce,
+.team-member {
+	border: solid #999 1px;
+	box-sizing: border-box;
+}
+
+.team-info img,
+.team-member img {
+	width: 80px;
+}
+
+.team-info,
+.introduce,
+.team-member {
+	background-color: #fff;
+}
+
+/*团队信息*/
+.team-info {
+	position: relative;
+	width: 200px;
+	padding: 20px;
+	float: left;
+}
+
+.team-name {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	width: 50px;
+	line-height: 1.5em;
+	font-weight: bolder;
+}
+/*团队信息结束*/
+
+/*团队成员信息*/
+.team-member {
+	float: right;
+	width: 120px;
+	padding: 10px;
+}
+
+.team-member img {
+	margin: 10px 10px 10px 10px;
+}
+/*团队成员信息结束*/
+
+/*团队介绍*/
+.introduce {
+	margin: 0 160px 0 240px;
+	padding: 0 20px;
+}
+/*团队介绍结束*/
