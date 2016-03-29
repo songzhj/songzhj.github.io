@@ -1,0 +1,773 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	min-width: 960px;
+}
+
+div, span, p {
+	box-sizing: border-box;
+	font-family: "Microsoft YaHei", sans-serif;
+}
+
+div.fill {
+	flex: 1 1 0;
+}
+
+.flexbox {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+/*下拉选择框*/
+.select-area {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 40px;
+	max-width: 2000px;
+	padding: 0 100px;
+	width: 100%;
+}
+
+.select {
+	position: relative;
+	background: url("../image/dropdown.png") no-repeat right 10px center, white none repeat  0 0;
+	border: 2px solid white;
+	cursor: pointer;
+	padding-left: 10px;
+}
+
+.select:before {
+	color: #999;
+	content: attr(selected);
+	line-height: 32px;
+}
+
+.select ul {
+	display: none;
+	list-style-type: none;
+	max-height: 180px;
+	overflow: auto;
+}
+
+.select:focus {
+	border: 2px solid #c00;
+}
+
+.select:focus > ul {
+	background: #ddd none repeat 0 0;
+	border: 2px solid #c00;
+	cursor: pointer;
+	display: block;
+	left: -2px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	right: -2px;
+	top: 32px;
+	z-index: 2;
+}
+
+.select:focus > ul > li {
+    	padding-bottom: 5px;
+    	padding-left: 30px;
+    	padding-top: 5px;
+}
+
+.select:focus > ul > li:hover {
+   	background: #cc0000 none repeat scroll 0 0;
+   	color: white;
+}
+/*下拉选择框结束*/
+
+#top-bar {
+	position: fixed;
+	z-index: 5;
+	top: 0;
+	font-family: "Microsoft YaHei";
+	height: 52px;
+	min-width: 850px;
+	width: 100%;
+	display: flex;
+	background: white scroll;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#top-bar + section {
+	margin-top: 52px;
+}
+
+#top-bar .logo {
+	width: 32px;
+	height: 32px;
+	margin-left: 60px;
+	margin-top: 10px;
+}
+
+#top-bar .title {
+	line-height: 52px;
+	font-size: 20px;
+	margin-left:  10px;
+	cursor: default;
+}
+
+#top-bar > ul {
+	box-sizing: border-box;
+	height: 52px;
+	margin: 0;
+	padding: 0;
+}
+
+#top-bar .tab {
+	font-style: 14px;
+	font-weight: bolder;
+	color: #999;
+	display: inline-block;
+	line-height: 52px;
+	padding: 0 20px;
+	cursor: pointer;
+	box-sizing: content-box;
+	border-bottom: 0 solid red ;
+	transition: all 0.3s ease 0s;
+}
+
+#top-bar .selected,
+#top-bar .tab:hover {
+	border-bottom: 4px solid red;
+	line-height: 44px;
+	color: red;
+}
+
+#top-bar .login {
+	position: relative;
+	color: red;
+	line-height: 49px;
+	display: inline-block;
+	margin-right: 30px;
+	padding: 0 20px;
+	text-decoration: none;
+}
+
+#top-bar .login img {
+	position: relative;
+	top: 3px;
+	padding-right: 5px;
+}
+
+#part-1 {
+	position: relative;
+	height: calc(100vmin - 52px);
+	min-height: 375px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#part-1 .background {
+	position: absolute;
+	background: url("../image/img01.jpg") repeat 0 0 / cover ;
+	filter: brightness(0.8);
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	top: 0;
+}
+
+#part-1 .content {
+	padding-left: 120px;
+}
+
+#part-1 .context * {
+	margin: 20px 0;
+}
+
+#part-1 .title {
+	font-size: 60px;
+	color: white;
+}
+
+#part-1 .text {
+	font-size: 24;
+	line-height: 36px;
+	color: white;
+}
+
+#part-1 .button {
+	background-color: #de3e3e;
+	color: white;
+	cursor: pointer;
+	display: block;
+	font-size: 32px;
+	height: 60px;
+	width: 340px;
+	margin-top: 80px;
+	line-height: 60px;
+	text-align: center;
+	text-decoration: none;
+	transition: all 0.2s ease 0s;
+}
+
+#part-1 .button:hover {
+	background-color: #de5f5f;
+}
+
+#part-2 {
+	height: 260px;
+}
+
+#part-2 ul {
+	height: 100%;
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+#part-2 li {
+	position: relative;
+	display: flex;
+	align-items: center;
+	color: #8c8c8c;
+	flex: 1 1 0;
+	flex-direction: column;
+	height: 100%;
+	justify-content: center;
+	cursor: default;
+}
+
+#part-2 li:not(:first-child) span{
+	border-left: 1px solid;
+}
+
+#part-2 li span {
+	font-family: "Microsoft YaHei",sans-serif;
+	height: 3em;
+	margin-top: 40px;
+	padding: 0 20%;
+	text-align: center;
+	width: 100%;
+}
+
+#part-3 {
+	background-color: #dedede;
+	height: 380px;
+}
+
+#part-3 img {
+	width: 91px;
+}
+
+#part-3 span {
+	font-size: 55px;
+	color: #8c8c8c;
+	margin-top: 40px;
+}
+
+#part-4 {
+	position: relative;
+	height: 380px;
+}
+
+#part-4 .background {
+	position: absolute;
+	background: url("../image/bg_map.jpg") repeat  0 0 / cover;
+	filter: brightness(0.5);
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+#part-4 .content {
+	color: white;
+}
+
+#part-4 .content .title {
+	position: relative;
+	font-size: 24px;
+	line-height: 28px;
+	padding-bottom: 10px;
+}
+
+#part-4 .content .title:after {
+	position: absolute;
+	left: 50%;
+	top: 100%;
+	content: "";
+	width: 60px;
+	margin-left: -30px;
+	border-bottom: 3px solid white;
+}
+
+#part-4 .content .description {
+	margin: 20px 0;
+}
+
+
+#part-4 .select-area > * {
+	flex: 1 1 0;
+	height: 40px;
+	margin: 0 20px;
+	max-width: 300px;
+}	
+
+#part-4 .button {
+	background: #c00 none repeat 0 0;
+	line-height: 36px;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	letter-spacing: 20px;
+	text-indent: 20px;
+	transition: all 0.3s ease 0s;
+}
+
+#part-4 .button:hover {
+	background: #c44 none repeat 0 0;
+}
+
+#part-5 {
+	align-items: center;
+	background: #eee none repeat  0 0;
+	display: flex;
+	height: 580px;
+	justify-content: space-between;
+	padding: 0 calc(10% + 20px);
+}
+
+#part-5 > div > img {
+	background-color: white;
+	margin: 5px 0;
+	padding: 10px;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+#part-5 > div > .text > .title {
+	display: block;
+	font-size: 14px;
+	text-align: center;
+}
+
+#part-5 .description {
+	color: #666;
+	display: block;
+	font-size: 12px;
+	text-align: center;
+	margin-top: 6px;
+}
+
+#part-5 .highlight .text .title {
+	display: block;
+	font-size: 20px;
+	letter-spacing: 25px;
+	text-align: center;
+	text-indent: 25px;
+}
+
+#part-6 {
+	align-items: stretch;
+	display: flex;
+	height: 600px;
+	margin: 0 auto;
+}
+
+#part-6 .left {
+	display: flex;
+	position: relative;
+	align-items: center;
+	background: rgba(0, 0, 0, 0) url("../image/img02.jpg") no-repeat center bottom / cover ;
+	color: white;
+	flex: 2 1 0;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#part-6 .left:after {
+    	border-color: transparent #ffffff transparent transparent;
+    	border-style: solid;
+    	border-width: 20px 20px 20px 0;
+    	content: "";
+    	height: 0;
+    	margin-top: -10px;
+    	position: absolute;
+    	right: 0;
+    	top: 50%;
+    	width: 0;
+}
+
+
+#part-6  .left  .title {
+    	font-size: 48px;
+}
+
+#part-6  .left  .subtitle {
+    	font-size: 128px;
+    	line-height: 100px;
+}
+
+#part-6  .left  .description {
+    	font-size: 24px;
+    	line-height: 42px;
+    	margin-top: 30px;
+    	text-align: center;
+}
+
+
+#part-6 .right {
+    	align-items: center;
+    	display: flex;
+    	flex: 1 1 0;
+    	flex-direction: column;
+    	justify-content: center;
+}
+
+
+#part-6 .right  .title:after {
+   	background: rgba(0, 0, 0, 0) url("../image/sep.png") no-repeat left center;
+   	color: red;
+   	content: attr(data-num);
+   	font-weight: bold;
+   	line-height: 92px;
+   	padding-left: 24px;
+}
+
+#part-6 .right .title {
+    	display: block;
+    	font-size: 24px;
+}
+
+
+#part-6 .right .description {
+    	color: #ccc;
+    	display: block;
+    	font-size: 12px;
+    	line-height: 36px;
+    	text-align: justify;
+    	width: 64%;
+}
+
+
+#part-6 .right .button {
+    	background: white none repeat 0 0;
+    	border: 2px solid #c00;
+    	box-sizing: border-box;
+    	color: #c00;
+    	cursor: pointer;
+    	font-size: 14px;
+    	margin-top: 50px;
+    	padding: 7px 23px;
+    	text-decoration: none;
+    	transition: all 0.3s ease 0s;
+}
+
+
+#part-6 .right .tab {
+    margin-top: 30px;
+}
+
+
+#part-6 .right .tab > div {
+    background: #fff none repeat scroll 0 0;
+    border: 2px solid #aaa;
+    border-radius: 12px;
+    display: inline-block;
+    height: 12px;
+    margin: 0 10px;
+    width: 12px;
+}
+
+#part-7 {
+	display: flex;
+	height: 600px;
+}
+
+#part-7 > div {
+	display: flex;
+	flex: 1 1 0;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#part-7 .left {
+	background: #f55;
+	color: white;
+}
+
+#part-7 div > .description {
+	position: relative;
+	font-size: 20px;
+	text-align: center;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+}
+
+#part-7 div > .description:after {
+	position: absolute;
+	left: 50%;
+	top: 100%;
+	margin-left: -40px;
+	content: "";
+	border-bottom: 2px solid white;
+	width: 80px;
+}
+
+#part-7 div > .button {
+	border: 1px solid white;
+	width: 120px;
+	line-height: 40px;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	transition: all 0.3s ease 0s;
+}
+
+#part-7 .left .button:hover {
+	background: white;
+	color: #f55;
+}
+
+#part-7 .mid .description:after {
+	border-color: #000;
+}
+
+#part-7 .mid .button {
+	border-color: #f55;
+	color: #f55;
+}
+
+#part-7 .right {
+	position: relative;
+}
+
+#part-7 .right:before {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	content: "";
+	background: url("../image/img03.jpg") no-repeat right center / cover;
+	filter: brightness(0.65);
+}
+
+#part-7 .right:after {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -10px;
+	content: "";
+	border-color: transparent transparent transparent #fff;
+	border-width: 20px 0 20px 20px;
+	border-style: solid;
+}
+
+#part-8 .head {
+	height: 400px;
+}
+
+#part-8 .head .title{
+	position: relative;
+	font-size: 24px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+#part-8 .head .title:after {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -15px;
+	width: 30px;
+	content: "";
+	border-bottom: 2px solid #000;
+}
+
+#part-8 .head .description {
+	width: 600px;
+	color: #bbb;
+	text-align: center;
+}
+
+#part-8 .form {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	padding: 0 10% 200px;
+}
+
+#part-8 .form .left {
+	flex: 1 1 0;
+}
+
+#part-8 .form .left > div:after {
+	background: url("../image/more.png") no-repeat left center;
+	content: "more";
+	display: block;
+	font-family: serif;
+	font-size: 12px;
+	margin-left: auto;
+	padding-left: 15px;
+	position: absolute;
+	right: 0;
+	width: auto;
+}
+
+#part-8 .form .left > div {
+	padding-bottom: 20px;
+	position: relative;
+}
+
+#part-8 .form .left div .title {
+	display: block;
+	font-size: 20px;
+	line-height: 50px;
+}
+
+#part-8 .form .left div .description {
+	display: block;
+	color: #bbb;
+	overflow: hidden;
+}
+
+#part-8 .form .right {
+	flex: 2 1 0;
+	margin-left: 50px;
+}
+
+#part-8 .form .right > div[label]:before {
+    position: absolute;
+    color: #000;
+    content: attr(label);
+    font-size: 13px;
+    line-height: 36px;
+    text-indent: 14px;
+}
+
+#part-8 .form .right > div[label] {
+    position: relative;
+    background: #eee;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 5px;
+    width: calc(50% - 20px);
+}
+
+#part-8 .form .right input {
+	background: transparent;
+	border: none;
+	height: 100%;
+	width: 100%;
+	padding: 10px;
+	text-indent: 70px;
+}
+
+#part-8 .form .right .textarea[label] { /*这个地方的选择器没用[label]的话,优先级没有上面的#part-8 .form .right > div[label]高,width属性会按上面的算!!*/
+	width: calc(100% - 25px);
+}
+
+#part-8 .form .right textarea {
+	background: transparent;
+	border: none;
+	width: 100%;
+	height: 140px;
+	margin: 0;
+	padding: 10px;
+	text-indent: 160px;
+	line-height: 15px;
+	resize: none;
+}
+
+
+#part-8 .form .right .submit {
+    	background: #eee;
+    	border: none;
+    	cursor: pointer;
+    	line-height: 20px;
+    	margin: 5px;
+    	text-indent: -5px;
+    	width: calc(100% - 25px);
+}
+
+
+#bottom-bar {
+   	background: #334;
+   	color: white;
+   	height: 500px;
+   	width: 100%;
+}
+
+#bottom-bar .description .title{
+	font-size: 30px;
+	margin: 10px;
+}
+
+#bottom-bar .description .description {
+	width: 400px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#bottom-bar .description .subdescription {
+	align-items: stretch;
+	display: flex;
+	height: 50px;
+	justify-content: center;
+	margin-top: 40px;
+	width: 120%;
+}
+
+#bottom-bar .description .subdescription input {
+	border: none;
+	flex: 1 1 0;
+	font-size: 20px;
+	padding: 0 10px;
+}
+
+#bottom-bar .description .subdescription button {
+	background: #888;
+	border: medium none;
+	color: white;
+	font-size: 20px;
+	letter-spacing: 20px;
+	padding: 0 10px;
+	text-indent: 20px;
+}
+
+#bottom-bar .description .social {
+	margin-top: 50px;
+	margin-bottom: 100px;
+}
+
+#bottom-bar .description .social a{
+	text-decoration: none;
+	margin: 20px;
+}
+
+#bottom-bar .end {
+	position: relative;
+	background: #223;
+	height: 90px;
+	padding: 0 40px;
+	width: 100%;
+}
+
+#bottom-bar .end .copyright {
+	position: absolute;
+	top: 50%;
+	left: 4%;
+	margin-top: -6px;
+}
+
+#bottom-bar .end a {
+	position: absolute;
+	text-decoration: none;
+	color: white;
+	top: 50%;
+	right: 4%;
+	margin-top: -6px;
+}
