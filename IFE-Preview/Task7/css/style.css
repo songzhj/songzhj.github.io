@@ -641,7 +641,7 @@ div.fill {
 
 #part-8 .form .right > div[label]:before {
     position: absolute;
-    color: #000;
+    color: #999;
     content: attr(label);
     font-size: 13px;
     line-height: 36px;
