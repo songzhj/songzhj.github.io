@@ -9,22 +9,30 @@ body {
 }
 
 .header {
+	position: fixed;
+	top: 0;
 	height: 60px;
 	line-height: 60px;
 	width: 100%;
     	background-color: #000000;
 	border-color: #606061;
+	z-index: 5;
 }
 
 .header h2 {
 	text-align: center;
-	color: #7BBBEE;
 	font-family: "Comic Sans MS";
+}
+
+.header h2 a {
+	text-decoration: none;
+	color: #7BBBEE;
 }
 
 .body {
 	width:400px;
 	margin: 30px auto;
+	margin-top: 90px;
 	border-style: solid;
  	border-width:1px;
  	border-color: #555;
@@ -32,36 +40,47 @@ body {
  	background-color: #DFDFDF;
 }
 
-.body .note h2 {
-  	color:#EEEEEE;
+.body .note h3 {
+  	color:#ddd;
   	text-align:left;
+  	text-indent: 10px;
   	padding-left:5px; 
   	border-radius: 15px;
-  	background-color:#555;
+  	background-color:#56c;
 }
 
 .body .item {
-	width: auto;
   	margin-left: 20px;
-  	line-height: 20px;
-  	font-size: 120%;
+  	line-height: 30px;
+  	font-size: 110%;
 }
 
-.body .item:hover {
-	line-height: 40px;
-	font-size: 150%;
-	font-weight: bolder;
-}
-
-.body .item a:link {
+.body .item a {
 	text-decoration: none;
-	color:black;
+	color: black;
+	position: relative;
+	transition: color 0.3s linear 0s;
 }
 
-.body .item a:visited {
-	text-decoration: none;
-	color:black;
+.body .item a:hover {
+	color: #d59;
 }
+
+.body .item a:after {
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	content: "";
+	width: 0px;
+	border-bottom: 3px solid #67d;
+	transition: all 0.4s ease 0s;
+}
+
+.body .item a:hover:after {
+	border-bottom: 3px solid #67d;
+	width: 100%;
+}
+
 
 .body .item a span {
 	font-size: smaller;
