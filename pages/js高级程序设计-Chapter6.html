@@ -11,8 +11,22 @@
 <body>
 	<div class="header"></div>
 	<div class="body">
+		<ul id="dd">
+			<li>数据属性</li><p>Configurable：表示能否通过delete删除属性从而重新定义属性</p><p>Enumerable：表示能否通过for-in循环返回属性</p><p>Writable：表示能否修改属性的值</p><p>Value：包含这个属性的数据值</p><p>Value属性默认为undefined，其它三个默认为true</p>
+			<li>Object.defineProperty()</li><p>可以修改属性默认的特性</p><p>接受三个参数，1.对象 2.属性的名字 3.描述符对象。其中描述符对象拥有上面的四个属性。</p><p>如果调用这个函数但不指定具体属性，属性的默认是为false</p>
+			<li>访问器属性</li><p>包含一堆getter和setter函数</p><p>两个函数都不是必须的，非严格模式下，只指定getter意味着属性是不能写的，只指定setter在读取属性的时候会返回undefined</p>
+			<li>同时定义多个属性</li><p>Object.defineProperties()：可以同时对一个对象的不同属性进行定义，需要传递两个参数：第一个是需要定义的对象；第二个是包含所有属性和属性的定义的对象</p>
+			<li>获取属性的特性</li><p>可以使用Object.getOwnPropertyDescriptor()得到任意对象的某个属性的特性</p>
+			<li>创建对象的方法</li><p>工厂模式</p><p>构造函数模式</p><p>原型模式</p>
+			<li>isPrototypeof()</li><p>判断一个对象是否是某个原型的对象</p>
+			<li>hasOwnProperty()</li><p>检测一个属性是否存在与一个实例中，，或是存在于原型中</p>
+			<li>in操作符</li><p>两种用法，for-in与in</p><p>in可以判断一个对象中是否有某个属性，无论这个属性存在于实例中还是原型中</p><p>可以同时使用in和hasOwnProperty()判断属性到底是存在于对象中，还是原型中</p>
+			<li>keys()</li><p>返回一个对象的所有可枚举实例属性（数组形式返回）</p>
+			
+		</ul>
 	</div>
-	<div class="back"></div>
+	<div class="back">
+	</div>
 	<div class="toTop"></div>
 </body>
 </html>
