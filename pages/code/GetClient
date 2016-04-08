@@ -1,0 +1,82 @@
+﻿//为了避免污染全局作用域，使用模块模式
+var client = function() {
+	//呈现引擎
+	var engine = {
+		webkit: 0,
+		ie: 0,
+		gecko: 0,
+		khtml: 0,
+		opera: 0,
+		ver: null	//完整版本号
+	};
+
+	//浏览器
+	var browser = {
+		firefox: 0,
+		ie: 0,
+		chrome: 0,
+		safari: 0,
+		opera: 0,
+		konq: 0,
+		ver: null	//完整浏览器版本
+	};
+
+	//操作系统
+	var os = {
+		win: false,
+		mac: false,
+		x11: false,
+		ios: false,
+		android: false,
+		winphone: false
+	};
+
+	//检测呈现引擎和浏览器
+	var UA = navigator.userAgent;
+	if (window.opera) { //Opera浏览器可以使用window.opera判断。
+		engine.ver = browser.ver = window.opera.version();
+		engine.opera = browser.opera = parseFloat(engin.ver);
+	} else if (/AppleWebKit\/(\S+)/.test(UA)) { //webkit引擎
+		engine.ver = RegExp["$1"];
+		engine.webkit = parseFloat(engine.ver);
+		//判断是chrome还是safari
+		if (/Chrome\/(\S+)/.test(UA)) { //chrome
+			browser.ver = RegExp["$1"];
+			browser.chrome = parseFloat(browser.ver);
+		} else if (/Version\/(\S+)/.test(UA)) { //safari
+			browser.ver = RegExp["$1"];
+			browser.safari = parseFloat(browser.ver);
+		} else {
+			//都不符合，近似的确定版本号
+		}
+	} else if (/KHTML\/(\S+)/.test(UA) || /Konqueror\/([^;]+)/.test(UA)) { //konq浏览器有两种用户代理的表示
+		engine.ver = browser.ver = RegExp["$1"];
+		engine.khtml = browser.konq = parseFloat(engine.ver);
+	} else if (/rv:([^\)]+)\) Gecko\/\d{8}/.test(UA)) { //Gecko引擎
+		engine.ver = RegExp["$1"];
+		engine.gecko = parseFloat(engine.ver);
+		//确定是否是firefox
+		if (/Firefox\/(\S+)/.test(UA)) {
+			browser.ver = RegExp["$1"];
+			browser.firefox = parseFloat(browser.ver);
+		}
+	} else if (/MSIE ([^;]+)/.test(UA)) {
+		engine.ver = browser.ver = RegExp["$1"];
+		engine.ie = browser.ie = parseFloat(engine.ver);
+	}
+
+	//检测操作系统。不需要使用UA，使用navigator.platform就可以得到平台信息
+	var p = navigator.platform;
+	system.win = p.indexOf("Win") == 0;
+	system.mac = p.indexOf("Mac") == 0;
+	system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+	//移动设备
+	system.ios = (ua.indexOf("iPhone") > -1) || (ua.indexOf("iPod") > -1) || (ua.;indexOf("iPad") > -1);
+	system.winphone = (ua.indexOf("Win") > -1) && ((ua.indexOf("CE") > -1) || (ua.indexOf("Ph") > -1));
+
+	return {
+		engine: engine,
+		browser: browser,
+		system: system
+	};
+}();

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>songzhj - js高级程序设计-Chapter9</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/note.css">
+	<script type="text/javascript" src="../js/jquery-1.12.1.min.js"></script>
+	<script type="text/javascript" src="../js/scrollTop.js"></script>
+</head>
+<body>
+	<div class="header"></div>
+	<div class="body">
+		<ul>
+			<li>能力检测</li>
+			<p>由于浏览器之间的差异，某些方法并不被所有浏览器支持，因此在使用前需要检测浏览器是否有这个能力（方法）。</p>
+			<p>最简单的能力检测就是在使用之前使用if语句判断，有一点要注意的是，使用什么判断什么，否则可能会引发一些怪异的现象。</p>
+			<p>另一种更好的判断方法是使用typeof操作符判断确定要判断的目标是不是一个“function”。但要注意的一点是，IE8以前会发生一些怪异的事，比如说document对象的方法会返回“object”而不是“function”（因为那时候的IE，宿主对象是用COM而不是JScript实现）。</p>
+			<li>浏览器识别</li>
+			<p>通常来说，识别一个浏览器不如识别他的呈现引擎，因为无论是哪个浏览器，只要它们使用了相同版本的呈现引擎，那么它们一定支持相同的特性。</p>
+			<li>检测浏览器呈现引擎，浏览器版本，操作系统</li>
+			<p>对用户标识（UA）进行一系列的正则表达式匹配，就可以得到呈现引擎，浏览器版本，操作系统等信息：<a href="./code/GetClient" class="code">GetClient</a></p>
+			<p>用户代理是客户端检测的最后一个选择，只要有可能，都应该优先采用能力检测和怪癖检测。</p>
+		</ul>
+	</div>
+	<div class="back"></div>
+	<div class="toTop"></div>
+</body>
+</html>
