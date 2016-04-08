@@ -15,6 +15,33 @@
 			<li>window对象</li>
 			<p>即是js访问浏览器的接口，又是ES规定的Globle对象。</p>
 			<p>全局变量就是window的属性，但与直接在window对象上定义的属性不同的是，全局变量不能delete，而window对象的属性可以delete。</p>
+			<li>窗口位置</li>
+			<p>大多数浏览器可以使用window.screenLeft和window.screenTop来设置窗口位置，Firefox则是window.screenX和window.screenY。</p>
+			<p>moveTO()和moveBy()也可以移动窗口，但在某些浏览器中是禁用的。</p>
+			<li>窗口大小</li>
+			<p>由于各个浏览器的实现不同，因此获得窗口大小的方式也不同。一个较为普遍的做法是：<a class="code" href="./code/WindowSizeExample">WindowSizeExample</a>。</p>
+			<p>resizeTo()和resizeBy()也可以改变窗口大小</p>
+			<li>window.open()</li>
+			<p>打开一个新窗口</p>
+			<p>接受四个参数：新窗口的url，target，特征值字符串，是否取代当前页面历史纪录的布尔值</p>
+			<p>新窗口的window对象有一个opener属性，指向打开它的原始窗口；对于新窗口，很多操作可以执行（比如close()）。</p>
+			<li>间歇调用setInterval()和超市调用setTimeout()</li>
+			<p>两个方法都会返回一个ID，可以用这个ID取消动作。</p>
+			<p>实践中，最好使用超时调用来模拟间歇调用。</p>
+			<li>location查询字符串参数</li>
+			<p>使用search属性得到URL末尾的内容，并转换：<a href="./code/LocationExample" class="code">LocationExample</a>。</p>
+			<li>location.replace()</li>
+			<p>重定向操作，不会再浏览器的历史纪录里面添加纪录。</p>
+			<li>location.href</li>
+			<p>改变当前浏览器url，会在浏览器历史纪录中留下记录。</p>
+			<li>location.reload()</li>
+			<p>重新加载页面，传入参数true会强制从服务器重新加载，否则有可能从本地缓存重新加载。</p>
+			<li>检测浏览器插件</li>
+			<p>对于非IE浏览器，可以使用navigator对象的plugins数组来逐项检测：<a href="./code/PluginExample" class="code">PluginExample</a>。</p>
+			<p>对于IE浏览器，则只能使用专有的ActiveXObject来检测：<a href="./code/PluginExample02" class="code">PluginExample02</a>。</p>
+			<li>history对象</li>
+			<p>开发人员不能直接得知用户访问过的URL，但是可以使用history.go()实现页面的前进和后退；forward()和back()也可以前进或后退。</p>
+			<p>使用history.length可以获得历史纪录的数量，刚刚打开第一个页面时这个值为0。</p>
 		</ul>
 	</div>
 	<div class="back"></div>

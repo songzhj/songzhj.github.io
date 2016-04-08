@@ -1,0 +1,8 @@
+function hasIEPlugin(name){
+	try {
+		new ActiveXObject(name);
+		return true;
+	} catch (ex){
+		return false;
+	}
+}

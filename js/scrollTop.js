@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
   $(".header").load("header.html", function(responseText,textStatus,XMLHttpRequest) {
     if (textStatus == "error") {
       $(".header").load("./pages/header.html");
@@ -28,5 +28,10 @@ $(document).ready(function() {
       }, 300);
       return false;
     });
+  });
+
+  //_blank
+  $(function() {
+    $(".code").attr('target', "_blank");
   });
 });
