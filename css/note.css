@@ -49,3 +49,7 @@ li table td {
 	-o-transform: scale(1.2, 1.2);
 	transform: scale(1.2, 1.2);
 }
+
+.code {
+	text-decoration: none;
+}
