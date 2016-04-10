@@ -15,6 +15,7 @@
 			<li>NodeList</li>
 			<p>NodeList是有生命有呼吸的对象，而不是在第一次访问它拍下来的一张快照。</p>
 			<p>可以使用Array.prototype.slice.call(someNode.childNodes, 0);将NodeList转换成数组（IE8以前的版本要使用枚举的方式转换）。</p>
+			<p>尽量减少直接方位NodeList的次数；最好将从NodeList中取得的值缓存起来使用。</p>
 			<li>document.domain</li>
 			<p>不同域的js是不能相互通信的，但是可以使用document.domain将不同的域设置成相同的域，使js可以相互操作。</p>
 			<p>domain一旦设置为松散的，就不能再设置能紧绷的。</p>
@@ -24,7 +25,6 @@
 			<p>可以使用getAttribute()和setAttribute()取得和设置特性，用removeAttribute()移除特性。</p>
 			<p>上面的方法对于自定义特性有效；根据HTML5规范，自定义特性应以 data- 前缀开头以便验证。</p>
 			<p>由于getAttribute()获取到的特性值与属性获取的有时会不同，因此开发过程中通常只有在获取自定义特性时才使用函数获取，普遍情况下都使用属性获取。</p>
-			
 		</ul>
 	</div>
 	<div class="back"></div>
