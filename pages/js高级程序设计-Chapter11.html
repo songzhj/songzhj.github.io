@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>songzhj - js高级程序设计-Chapter11</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/note.css">
+	<script type="text/javascript" src="../js/jquery-1.12.1.min.js"></script>
+	<script type="text/javascript" src="../js/scrollTop.js"></script>
+</head>
+<body>
+	<div class="header"></div>
+	<div class="body">
+	<ul>
+		<li>选择器</li>
+		<p>querySelector()：传入一个css选择符，返回第一个符合的元素。</p>
+		<p>querySelectorAll()：传入一个css选择福利，返回所有符合的元素（NodeList的实例,这个实例是一个快照，不会由于动态变化引起性能问题）。</p>
+		<li>元素遍历</li>
+		<p>previousElementSibling：指向上一个元素。</p>
+		<p>nextElementSibling：指向下一个元素。</p>
+		<li>HTML5 API</li>
+		<p>getElementsByClassName()：根据class返回所有符合的元素的集合（NodeList的实例,这个实例不是一个快照，会动态变化！）。</p>
+		<p>classList：每个元素可能有很多个类名，classList就是这些类名的集合，使用add，remove，contains，toggle方法可以对其进行操作。</p>
+		<p>document.activeElement：指向当前获取焦点的元素。</p>
+		<p>document.readyState：文档是否加载完毕。</p>
+		<p>document.compatMode：浏览器的渲染模式（兼容模式和混杂模式）。</p>
+		<p>在使用innerHTML，outerHTML时，最好先手工删除要被删除要被替换的元素的所有事件和和js对象属性。否则会引发性能问题。尽量减少使用innerHTML的次数，一次性的添加进去。</p>
+		<p>scrollIntoView()：将窗口一滚动的方式滚动至某个元素。</p>
+	</ul>
+	</div>
+	<div class="back"></div>
+	<div class="toTop"></div>
+</body>
+</html>
