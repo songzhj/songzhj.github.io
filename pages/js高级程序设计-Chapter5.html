@@ -20,7 +20,7 @@
 			<li>正则表达式</li><p>正则表达式创建: var expression = /pattern/flags,其中flags可以是g(全局模式),i(不区分大小写),m(多行模式)</p><p>使用test()方法检测字符串是否匹配正则表达式;使用exec()方法返回与正则表达式匹配的项和位置</p>
 			<li>函数声明和函数表达式的区别</li><p>解析器会率先读取函数声明,并使其在执行任何代码之前可用;函数表达式则必须等到解析器执行到它所在的代码行,才会真正被解释执行</p>
 			<li>arguments对象的callee属性</li><p>函数内部的atguments对象有一个callee属性,这个属性是一个指向拥有这个arguments对象的函数的指针(即指向本函数)</p><p>严格模式下访问arguments.callee会导致错误</p>
-			<li>this对象</li><p>this指向当前执行环境的对象</p><p>在网页的全局作用域中调用函数时,this引用的就是window</p>
+			<li>this对象</li><p>this指向当前执行环境的对象</p><p>在网页的全局作用域中调用函数时,this引用的就是window</p><p>一定要记住，谁调用的函数，谁就是this，运行时用onclick绑定事件的时候，函数内部的this就是触发事件的那个元素；而将onclick写死在html中时，被调用函数中的this是window。</p>
 			<li>caller属性</li><p>caller属性保存着调用当前函数的函数的引用,如果在全局作用域中调用当前函数,则值为null</p><p>caller是函数的属性,不是arguments对象的属性</p>
 			<li>call()和apply()</li><p>call()和apply()都需要一个环境的参数(如this);但apply()仅需要传递参数的数组(或arguments对象),call()需要将参数逐个列举出来</p>
 			<li>bind()</li><p>bing()将一个传入的环境和这个函数的this绑定在一起</p>
