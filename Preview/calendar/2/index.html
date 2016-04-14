@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>QwQ万年历</title>
+	<link rel="stylesheet" href="index.css"></head>
+	<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery
+/jquery-1.4.min.js"></script>
+<body>
+	<div id="container">
+		<div id="content">
+			<div>
+				<form name="headTop">
+					<div class="top">
+						<span class="icon-left" id="leftYear">
+							<img src="images/left.png" alt=""></span>
+						<input type="text" id="yearInput" readonly="">
+						<div id="years" class="hideSpan"></div>
+						<span class="icon-right" id="rightYear">
+							<img src="images/right.png" alt=""></span>
+					</div>
+					<div class="top">
+						<span class="icon-left" id="leftMonth">
+							<img src="images/left.png" alt=""></span>
+						<input type="text" id="monthInput" readonly=""style="width: 55px;">
+						<div id="months" class="hideSpan"></div>
+						<span class="icon-right" id="rightMonth">
+							<img src="images/right.png" alt=""></span>
+					</div>
+					<div class="top">
+						<input type="text" id="vacaInput" readonly="" style="width: 115px;padding-left: 0px;text-align: center;border: none;">
+						<div id="vacations" class="hideSpan">
+							<span style="background: #77A1B4;color: #fff">2016节假日安排</span>
+							<span id="yDan">元旦</span>
+							<span id="chJie">春节</span>
+							<span id="qMing">清明节</span>
+							<span id="ldJie">劳动节</span>
+							<span id="dwJie">端午节</span>
+							<span id="zhqJie">中秋节</span>
+							<span id="gqJie">国庆节</span>
+						</div>
+					</div>
+					<div class="top">
+						<button>返回今天</button>
+					</div>
+					<div class="top beijing">
+						北京时间:
+						<span id="BeijTime"></span>
+					</div>
+				</form>
+			</div>
+			<div id="main">
+				<div id="rightForm">
+					<div id="dateInfo" class="rightC">
+						<p id="yerMonDay"></p>
+						<p id="hao"></p>
+						<p id="animal"></p>
+					</div>
+					<div id="mood" class="rightC">
+					<img src="images/lovely.jpeg" alt="" style="width: 143px;">
+					</div>
+				</div>
+				<form name="CLD">
+					<table>
+						<tbody>
+							<tr>
+								<th>一</th>
+								<th>二</th>
+								<th>三</th>
+								<th>四</th>
+								<th>五</th>
+								<th>六</th>
+								<th>日</th>
+							</tr>
+							<tr id="firstLine">
+								<!--
+				<td>
+								<div>
+									<a href="javascript:;" data-click="{fm:'beha'}" hidefocus="true" data="2016-3-27">
+										<span>27</span>
+										<span>十九</span>
+									</a>
+								</div>
+							</td>
+							-->
+						</tr>
+						<tr id="line2"></tr>
+						<tr id="line3"></tr>
+						<tr id="line4"></tr>
+						<tr id="line5"></tr>
+						<tr id="line6"></tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="index.js" charset="UTF-8"></script>
+<!--
+<script>
+$(document).ready(function(){
+		$('#div').not($('#years')).click=function(){
+			$('#years').class='hideSpan';
+			$('#months').className='hideSpan';
+}
+	})
+</script>
+-->
+</body>
+</html>
