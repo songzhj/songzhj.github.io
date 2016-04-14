@@ -194,6 +194,7 @@ function displayCalendar(firDateDay, lastMonLasDate, lasDate, month, year) {
 	}	
 }
 	function writeDateInfo(i){
+		/*
 		for (let j=0;j<42;j++){
 			if (j==i) {
 				tds[j].className+='bgcolor';
@@ -201,7 +202,7 @@ function displayCalendar(firDateDay, lastMonLasDate, lasDate, month, year) {
 				console.log(tds[j].className);
 				tds[j].className.pop();
 			}
-		}
+		}*/
         var dateInfo = document.getElementById('dateInfo');
         if (i%7==6) {
         	dateInfo.innerHTML='<p id="yerMonDay">'+tds[i].getAttribute("date")+' 星期'+ths[6].innerHTML+'</p>';
