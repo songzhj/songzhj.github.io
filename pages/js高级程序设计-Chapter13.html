@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>songzhj - js高级程序设计-Chapter13</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/note.css">
+	<script type="text/javascript" src="../js/jquery-1.12.1.min.js"></script>
+	<script type="text/javascript" src="../js/scrollTop.js"></script>
+</head>
+<body>
+	<div class="header"></div>
+	<div class="body">
+		<ul>
+			<li>事件流</li>
+			<p>事件流指的是从页面中接收事件的顺序。</p>
+			<p>事件冒泡：从事件开始时最具体的哪个元素逐级向上进行传递。</p>
+			<p>事件捕获：与事件冒泡完全相反的顺序捕获事件。</p>
+			<p>一些老的浏览器不支持事件捕获，因此通常推荐使用事件冒泡，有特殊需要的时候再使用事件捕获。</p>
+			<li>DOM事件流</li>
+			<p>三个阶段：事件捕获阶段，处于目标阶段，事件冒泡阶段。</p>
+			<p>高版本的浏览器都会在事件捕获阶段触发对象上的事件，有两个机会再目标对象上操作。</p>
+			<li>事件处理程序(事件监听器)</li>
+			<p>响应某个事件的函数叫做事件处理程序。</p>
+			<p>HTML事件处理程序：在这个函数内部，this指向事件的目标元素；可以直接使用event变量访问event对象；在表单中还可以直接访问其它表单内的元素。</p>
+			<p>DOM0级事件处理程序：element.onclick = function; 同样，函数内部的this指向事件的目标元素，可以通过this访问目标元素所有的方法和属性；将onclick赋值为null可以解除绑定。</p>
+		</ul>
+	</div>
+	<div class="back"></div>
+	<div class="toTop"></div>
+</body>
+</html>
