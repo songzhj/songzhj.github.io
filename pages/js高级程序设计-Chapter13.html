@@ -24,6 +24,22 @@
 			<p>响应某个事件的函数叫做事件处理程序。</p>
 			<p>HTML事件处理程序：在这个函数内部，this指向事件的目标元素；可以直接使用event变量访问event对象；在表单中还可以直接访问其它表单内的元素。</p>
 			<p>DOM0级事件处理程序：element.onclick = function; 同样，函数内部的this指向事件的目标元素，可以通过this访问目标元素所有的方法和属性；将onclick赋值为null可以解除绑定。</p>
+			<p>DOM2级事件处理程序：addEventListener、removeEventListener;可以添加多个事件，顺序处理。</p>
+			<p>IE事件处理程序：attachEvent、detachEvent。事件处理程序会在全局作用域运行，this=window。</p>
+			<p>跨浏览器的事件对象：<a href="./code/EventUtil" class="code">EventUtil</a>。</p>
+			<li>事件对象</li>
+			<p>只有在事件处理程序执行期间，event对象才会存在。</p>
+			<p>事件处理程序的内部，this始终等于currentTarget的值，而target则包含事件的实际目标。</p>
+			<p>stopPropagation()可以停止事件在DOM中的传播。</p>
+			<p>preventDefault()阻止事件的默认行为。</p>
+			<p>跨浏览器的事件对象：<a href="./code/EventUtil2" class="code">EventUtil</a>。</p>
+			<li>事件类型</li>
+			<p>焦点事件：blur、focus是主要的焦点事件。blur的事件目标是失去焦点的元素，focus的事件目标是获得焦点的元素。</p>
+			<li>鼠标、滚轮事件</li>
+			<p>click事件是由mousedown和mouseup两个事件组成的。dblclick事件则是由两个click事件（mousedown、mouseup、click、mousedown、mouseup、click、dblclick）组成的。</p>
+			<p>客户区坐标位置：event.clientX，event.clientY可以获取鼠标点击时，相对于窗口的位置。</p>
+			<p>页面位置：event.pageX，event.pageY可以获取鼠标点击时，相对于页面的位置。</p>
+			
 		</ul>
 	</div>
 	<div class="back"></div>
