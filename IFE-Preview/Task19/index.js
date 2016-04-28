@@ -1,7 +1,9 @@
 //柱形图宽度
 var position = {width: 0, i: 0};
 //循环颜色的数组
-colors = ['#F70808', '#6B04F6', '#504C4C', '#2BF60A','#000000', '#FFFC00'];
+var colors = ['#F70808', '#6B04F6', '#504C4C', '#2BF60A','#000000', '#FFFC00'];
+//排序演示时的锁
+var lock = 0;
 
 /**
  * 获取并判断输入数据
@@ -21,6 +23,10 @@ function getInputValue() {
   * 左侧入
  */
 function addElementLeft() {
+	if (lock) {
+		alert('正在排序演示');
+		return;
+	}
 	var wrap = document.getElementById('wrap');
 	var value = getInputValue();
 	if (value === undefined) {
@@ -34,6 +40,10 @@ function addElementLeft() {
   * 右侧入
  */
 function addElementRight() {
+	if (lock) {
+		alert('正在排序演示');
+		return;
+	}
 	var wrap = document.getElementById('wrap');
 	var value = getInputValue();
 	if (value == undefined) {
@@ -47,6 +57,10 @@ function addElementRight() {
  * 随机产生25组数据
 */
 function numberFactory() {
+	if (lock) {
+		alert('正在排序演示');
+		return;
+	}
 	var wrap = document.getElementById('wrap');
 	var html = '';
 	for (var i = 0; i < 25; ++i) {
@@ -60,6 +74,10 @@ function numberFactory() {
   * 左侧删除
  */
 function removeElementLeft() {
+	if (lock) {
+		alert('正在排序演示');
+		return;
+	}
 	var wrap = document.getElementById('wrap');
 	wrap.removeChild(wrap.firstElementChild);
 }
@@ -68,6 +86,10 @@ function removeElementLeft() {
   * 右侧删除
  */
 function removeElementRight() {
+	if (lock) {
+		alert('正在排序演示');
+		return;
+	}
 	var wrap = document.getElementById('wrap');
 	wrap.removeChild(wrap.lastElementChild);
 }
@@ -119,9 +141,11 @@ function sortDemo() {
 			j = 0;	
 		}
 		if (i >= wrap.childElementCount) {
+			lock = 0;
 			clearInterval(t);
 		}
 	}
+	lock = 1;
 	var t = setInterval(sort, 50);	
 }
 
