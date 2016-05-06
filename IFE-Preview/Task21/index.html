@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task21</title>
+	<style type="text/css">
+		.wrap {
+			height: 60px;
+			width: 300px;
+			margin: 20px;
+		}
+		.item {
+			height: 40px;
+			width: 40px;
+			margin: 10px;
+			float: left;
+			color: white;
+			background-color: blue;
+			line-height: 40px;
+			font-size: 2em;
+			text-align: center;
+		}
+		.input {
+			margin-top: 20px;
+			text-align: center;
+		}
+		.match {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="input">
+		<span>Tag:</span><input type="text" id="tag-input" />
+		<div class="wrap" id="tag-wrap"></div>
+		<textarea id="favo-input" cols="30" rows="5"></textarea>
+		<button id="add-favo">添加兴趣</button>
+		<div class="wrap" id="favo-wrap"></div>
+	</div>
+	<div id="wrap">
+
+	</div>
+	<script type="text/javascript" src="./index.js"></script>
+</body>
+</html>
