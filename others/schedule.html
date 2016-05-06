@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Schedule</title>
+	<style type="text/css">
+		#container {
+			margin: 10px auto;
+			text-align: center;
+			width: 550px;
+		}
+		.title {
+			font-size: 2em;
+		}
+		#target {
+			color: red;
+		}
+		#total-score {
+			color: blue;
+		}
+		#input {
+			margin-top: 10px;
+			overflow: auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div class="title">前端学习计划</div>
+		<div>目标得分：<span id="target">10000</span></div>
+		<div>总得分：<span id="total-score"></span></div>
+		<div id="description">
+			<p>1.阅读一页书籍+1分。</p>
+			<p>2.完成IFE任务+15分。</p>
+			<p>3.阅读其它技术文章并理解+3分。</p>
+			<p>4.浏览StackOverflow +1分，回答+2分。</p>
+			<p>5.阅读相关文档，每页+1分。</p>
+			<p>6.每周日为休息日，用X来代替得分；其它时间若没有加分，则每天-10分。</p>
+		</div>
+		<span class="title">统计表：</span>
+		<div id="input">
+			
+		</div>
+	</div>
+	<script type="text/javascript">
+		function getInput() {
+			var input = document.getElementById('input');
+			var number = input.innerHTML.trim().split(' ');
+			return number;
+		}
+
+		function render(score) {
+			document.getElementById('total-score').innerHTML = score;
+		}
+
+		function calculate(input) {
+			var score = 0;
+			for (let i in input) {
+				if (input[i] !== 'X') {
+					score += parseInt(input[i]);
+				}
+			}
+			return score;
+		}
+		(function() {
+			var score = getInput();
+			render(calculate(score));
+		}());
+	</script>
+</body>
+</html>
