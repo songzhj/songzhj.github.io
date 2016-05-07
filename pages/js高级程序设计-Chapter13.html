@@ -39,6 +39,12 @@
 			<p>click事件是由mousedown和mouseup两个事件组成的。dblclick事件则是由两个click事件（mousedown、mouseup、click、mousedown、mouseup、click、dblclick）组成的。</p>
 			<p>客户区坐标位置：event.clientX，event.clientY可以获取鼠标点击时，相对于窗口的位置。</p>
 			<p>页面位置：event.pageX，event.pageY可以获取鼠标点击时，相对于页面的位置。</p>
+			<p>屏幕坐标位置：event.screenX，event.screenY可以获取鼠标事件发生时，相对于屏幕的位置</p>
+			<p>修改键：shiftKey、ctrlKey、altKey、metaKey（相当于windows的windows键）的属性表示在鼠标按下时相应的键是否同时按下。</p>
+			<p>相关元素：在发生mouseover和mouseout事件时，涉及到的更多元素。对于mouseover而言，事件的获得光标的元素是事件的主目标，相关元素是失去光标的元素；对于mouseout而言，事件的主目标是失去光标的元素，相关元素是获得光标的元素。</p>
+			<p>鼠标按钮：在event事件中存在一个button属性，DOM中的0表示鼠标左键，1表示鼠标中建，2表示鼠标右键；IE8及之前的button属性中提供了另外的（更多也没什么用的）值。</p>
+			<p>鼠标滚轮事件：event.wheelDelta属性，当滚轮向上滚动，属性值为+120的倍数，向下滚动，属性值为-120的倍数，可以通过正负判断滚动方向；在opera9.5以前，这个值的正负是相反的。Firefox中，支持一个名为DOMMouseScroll（其它为mousewheel）的事件，有关滚轮的信息保存在event.detail中，向上滚动是-3的倍数，向下滚动式+3的倍数。</p>
+			<li>键盘事件</li>
 			
 		</ul>
 	</div>
