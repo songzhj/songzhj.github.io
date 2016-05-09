@@ -45,7 +45,12 @@
 			<p>鼠标按钮：在event事件中存在一个button属性，DOM中的0表示鼠标左键，1表示鼠标中建，2表示鼠标右键；IE8及之前的button属性中提供了另外的（更多也没什么用的）值。</p>
 			<p>鼠标滚轮事件：event.wheelDelta属性，当滚轮向上滚动，属性值为+120的倍数，向下滚动，属性值为-120的倍数，可以通过正负判断滚动方向；在opera9.5以前，这个值的正负是相反的。Firefox中，支持一个名为DOMMouseScroll（其它为mousewheel）的事件，有关滚轮的信息保存在event.detail中，向上滚动是-3的倍数，向下滚动式+3的倍数。</p>
 			<li>键盘事件</li>
-			
+			<p>keydown：当用户按下键盘上的任意键时触发。</p>
+			<p>keypress：当用户按下键盘上的字符键时触发。</p>
+			<p>keyup：当用户释放键盘上的键时触发。</p>
+			<p>textInput：将文本插入文本框之前触发。</p>
+			<p>键码：event.keyCode的值表示键码。</p>
+			<p>字符编码：除IE8以前版本和opera意外的浏览器，使用charCode保存在keypress事件发生时按下的字符码；IE8以前和opera仍使用keyCode保存。</p>
 		</ul>
 	</div>
 	<div class="back"></div>
