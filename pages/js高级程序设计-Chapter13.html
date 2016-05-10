@@ -51,6 +51,25 @@
 			<p>textInput：将文本插入文本框之前触发。</p>
 			<p>键码：event.keyCode的值表示键码。</p>
 			<p>字符编码：除IE8以前版本和opera意外的浏览器，使用charCode保存在keypress事件发生时按下的字符码；IE8以前和opera仍使用keyCode保存。</p>
+			<p>textInput事件：与keypress不同的是，只有在编辑区才能触发textInput事件。textInput事件的event对象有一个data属性，这个属性的值是用户输入的字符。目前IE9+，safari，chrome支持这个事件。</p>
+			<li>变动事件</li>
+			<p>删除节点：在使用removeChild或replaceChild从DOM中删除节点时，会触发这个事件。事件的目标target是被删除的节点，event.relatedNode中保存着对父节点的引用。如果被移除的节点包含子节点，则在所有的子节点和这个被移除的节点上会相继发生DOMNodeRemovedFromDocument事件（这个事件不会冒泡）。而后在父节点上触发DOMSubtreeModified事件。</p>
+			<p>插入节点：在使用appendChild，replaceChild或insertBefore插入向DOM中插入节点时，首先会触发DOMNodeInserted事件。这个时间的target是被插入的节点，event.relatedNode中保存着对父节点的引用。紧接着在被插入的节点上触发DOMNodeInsertedIntoDocument事件（这个事件不会冒泡）。最后在父节点上触发DOMSubtreeModified事件。</p>
+			<li>HTML5事件</li>
+			<p>contextmenu事件：在页面上右击（MAC中是ctrl+单击）而触发的上下文菜单事件，使用event.preventDefault（）可以阻止原有的上下文菜单（IE中是将event.returnValue的值设置为false）。配合onclick取消上下文菜单的显示。</p>
+			<p>beforeunload事件：在卸载页面前触发该事件，让用户确认是否离开页面。</p>
+			<p>DOMContentLoaded事件：该事件在DOM树形成后就会触发（而load事件需要在js文件，图片等读取完毕后才能触发）。对于不支持该事件的浏览器，可以在页面加载期间设置一个0毫秒的超市调用，意义是“当前js处理完后立即运行这个函数”。</p>
+			<p>hashchange事件：该事件在url的‘#’后面的部分发生变化时触发，事件应该添加到window对象上。</p>
+			<li>设备事件</li>
+			<p>orientationchange事件：（safari事件）当设备的屏幕旋转时触发该事件，事件添加到window对象上。window.orientation可以获取到3个值：0表示设备正常，90表示向左旋转90度，-90表示向右旋转90度。</p>
+			<p>deviceorientation事件：设备的朝向改变时触发该事件，事件添加到window对象上。</p>
+			<p>devicemotion事件：设备是否正在移动。</p>
+			<li>事件委托</li>
+			<p>事件处理程序过多会引发页面的内存和性能问题，此时可以用事件委托来降低内存的消耗，提升页面的加载速度，提高整体性能。</p>
+			<p>能够冒泡的事件都可以使用事件委托，但是要根据具体情况斟酌使用。</p>
+			<li>及时移除事件处理程序</li>
+			<p>在元素被删除时，与它关联的事件处理程序也要一并删除，否则事件处理程序会堆积在内存中。</p>
+			<p>在页面卸载时，最好手动将所有事件处理程序删除。</p>
 		</ul>
 	</div>
 	<div class="back"></div>
