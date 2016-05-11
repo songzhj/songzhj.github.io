@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>songzhj - js高级程序设计-Chapter14</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/note.css">
+	<script type="text/javascript" src="../js/jquery-1.12.1.min.js"></script>
+	<script type="text/javascript" src="../js/scrollTop.js"></script>
+</head>
+<body>
+	<div class="header"></div>
+	<div class="body">
+		<ul>
+			<li>提交表单</li>
+			<p>button和input都可以提交表单，只要type的值为submit。</p>
+			<p>图像按钮也可以提交表单，type的值为image。</p>
+			<p>使用按钮提交表单时，在数据发送给服务器之前，会触发submit事件，可以在这时验证表单的数据正确性。如果验证不通过，可以通过event.preventDefault()阻止表单的提交。</p>
+			<p>js可以操作表单的提交，使用submit()函数，这时表单会直接提交，不会触发submit事件。</p>
+			<li>表单字段</li>
+			<p>表单的element属性中顺序保存了所有字段的集合。可以只用下标或name访问。</p>
+			<li>文本框操作</li>
+			<p>选择文本：select()方法可以在文本框获得焦点是全选内容。</p>
+			<p>选择事件：select事件在用户选择文本框内的文本时会被触发，触发的具体时间因浏览器而异。selectionStart和selectionEnd标记了被选择文本的开始可结束的位置。</p>
+			<p>选择部分文本：setSelectionRange()方法可以选择部分文本，它接受两个参数，分别是要选择文本的开始和结束的位置索引。</p>
+			<li>HTML5约束验证</li>
+			<p>required：必填字段，该字段不能为空</p>
+			<p>pattern：匹配用户的输入是否符合正则表达式。默认pattern的开头和结尾已经有^和$，不需要手动添加。checkValidity()方法可以获得字段的值是否与pattern有效匹配。</p>
+			<p>禁用表单验证：novalidate可以禁用该表单的验证。在提交按钮上添加formnovalidate使该按钮不验证表单直接提交。</p>
+			<li>选择框</li>
+			<p>对于单选框，可以直接使用selectedIndex得到选中项的索引值；对于多选框，需要遍历所有选项判断selected属性的值来取得所有的选中项。</p>
+			<p>使用add(newOption，index)方法可以添加选项。第一个参数为新的选项，第二个为undefined，可以将新选项添加到最后。</p>
+			<p>使用remove(index)方法可以删除选项。</p>
+			<li>富文本编辑</li>
+			<p>contenteditable：这个属性可以使元素可以编辑。</p>
+			<p>designMode：将iframe的document.designMode设置为‘on’，可以编辑该iframe。</p>
+			<p>操作富文本，可以使用document.execCommand()方法来实现。（P439）</p>
+		</ul>
+	</div>
+	<div class="back"></div>
+	<div class="toTop"></div>
+</body>
+</html>
