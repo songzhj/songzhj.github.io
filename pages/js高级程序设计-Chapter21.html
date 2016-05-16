@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>songzhj - js高级程序设计-Chapter21</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/note.css">
+	<script type="text/javascript" src="../js/jquery-1.12.1.min.js"></script>
+	<script type="text/javascript" src="../js/scrollTop.js"></script>
+</head>
+<body>
+	<div class="header"></div>
+	<div class="body">
+		<ul>
+			<li>XHR的用法</li>
+			<p>open()：启动一个请求以备发送。它接受三个参数，请求的类型（post，get），请求的URL，是否发送异步请求的布尔值。</p>
+			<p>send()：发送请求的主体。接受一个参数，代表请求的主体，没有主体传入null。</p>
+			<p>在异步传输时，使用readystatechange事件来监听readyState的状态，readyState为4时代表响应数据接收完成。</p>
+			<p>abort()：取消异步请求。</p>
+			<li>FormData</li>
+			<p>序列化/创建与表单格式相同的数据，可以直接传给send()。</p>
+			<p>append(key, value)方法向FormData实例中添加一组键值。</p>
+			<p>可以直接向构造函数传入一个表单。</p>
+			<li>overrideMimeType</li>
+			<p>重写XHR响应的MIME类型。在send()之前使用。</p>
+			<li>其它跨域技术</li>
+			<p>图像ping</p>
+			<p>JSONP</p>
+			<p>Comet：长轮询和流</p>
+		</ul>
+	</div>
+	<div class="back"></div>
+	<div class="toTop"></div>
+</body>
+</html>
