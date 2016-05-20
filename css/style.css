@@ -21,12 +21,13 @@ body {
 	z-index: 5;
 }
 
-.header h2 {
+.header address {
 	text-align: center;
 	font-family: "Comic Sans MS";
 }
 
-.header h2 a {
+.header address a {
+	font-size: 1.5em;
 	text-decoration: none;
 	color: #7BBBEE;
 }
