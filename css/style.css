@@ -6,7 +6,7 @@
 
 body {
 	background-color: #cdcdcd;
-	min-width: 515px;
+	min-width: 400px;
 }
 
 .header {
@@ -41,6 +41,12 @@ body {
  	border-color: #555;
  	border-radius: 17px;
  	background-color: #DFDFDF;
+}
+
+@media screen and (max-device-width: 600px) {
+	.body {
+		width: 90%;
+	}
 }
 
 .body .note h3 {
