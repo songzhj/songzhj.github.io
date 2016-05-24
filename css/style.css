@@ -35,9 +35,7 @@ body {
 	width:400px;
 	margin: 30px auto;
 	margin-top: 90px;
-	border-style: solid;
- 	border-width:1px;
- 	border-color: #555;
+	border: 1px solid #555;
  	border-radius: 17px;
  	background-color: #DFDFDF;
 }
