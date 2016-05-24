@@ -15,7 +15,6 @@ body {
 	height: 60px;
 	line-height: 60px;
 	width: 100%;
-	min-width: 515px;
     	background-color: #000000;
 	border-color: #606061;
 	z-index: 5;
@@ -43,7 +42,7 @@ body {
  	background-color: #DFDFDF;
 }
 
-@media screen and (max-device-width: 600px) {
+@media screen and (max-width: 600px) {
 	.body {
 		width: 90%;
 	}
