@@ -1,55 +1,28 @@
-ul p {
-	/*font-style:italic;*/
-	font-size: medium;
-	margin: 8px 15px;
+* {
+	margin: 0px;
+	padding: 0px;
+	border-width: 0px;
 }
 
-li table {
-	margin-left: 15px;
-	border-collapse: collapse;
+body {
+	background-color: #cdcdcd;
+	/*min-width: 400px;*/
+}
+
+.body {
+	width:550px;
+	margin: 30px auto;
+	margin-top: 90px;
+	padding: 10px 25px;
 	border-style: solid;
-	border-width: 1px;
-	font-size: smaller;
+ 	border-width:1px;
+ 	border-color: #555;
+ 	border-radius: 17px;
+ 	background-color: #DFDFDF;
 }
 
-li table td {
-	border-style: solid;
-	border-width: 1px;
-}
-
-.body ul {
-	padding-left: 20px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-
-.body li {
-	padding-top: 5px;
-	font-size: larger;
-}
-
-.body ul ul li {
-	margin-left: 10px;
-	font-size: medium;
-}
-
-.back {
-	position: fixed;
-	top: 90px;
-	left: calc(50% - 250px);
-}
-
-.back img {
-	border-radius: 12px;
-}
-
-.back img:hover {
-	-webkit-transform: scale(1.2, 1.2);
-	-ms-transform: scale(1.2, 1.2);
-	-o-transform: scale(1.2, 1.2);
-	transform: scale(1.2, 1.2);
-}
-
-.code {
-	text-decoration: none;
+@media screen and (max-device-width: 600px) {
+	.body {
+		width: 90%;
+	}
 }
