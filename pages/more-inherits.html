@@ -51,6 +51,9 @@
 		ul {
 			margin-left: -20px;
 		}
+		code {
+			white-space: pre-wrap;
+		}
 	</style>
 </head>
 <body>
@@ -104,80 +107,267 @@
 		</tr>
 		<tr>
 			<td class="td1">3</td>
-			<td class="td2"></td>
-			<td class="td3"></td>
-			<td class="td4"></td>
-			<td class="td5"></td>
+			<td class="td2">临时构造器法</td>
+			<td class="td3">
+<code>
+function extend(Child, Parent) {
+	var F = function() {};
+	F.prototype = Parent.prototype;
+	Child.prototype = new F();
+	Child.prototype.constructor = Child;
+	Child.uber = Parent.prototype;
+}
+</code>
+			</td>
+			<td class="td4">
+				<ul>
+					<li>基于构造器工作的模式</li>
+					<li>使用原型链模式</li>
+				</ul>
+			</td>
+			<td class="td5">
+				<ul>
+					<li>此模式不同于1号方案，它只继承父对象的原型属性，而对于其自身属性（也就是被构造器添加到this值中的属性）则不予继承。</li>
+					<li>另外，该模式还为我们访问父对象提供了便利的方式（即通过uber属性）。</li>
+				</ul>
+			</td>
 		</tr>
 		<tr>
 			<td class="td1">4</td>
-			<td class="td2"></td>
-			<td class="td3"></td>
-			<td class="td4"></td>
-			<td class="td5"></td>
+			<td class="td2">原型属性拷贝法</td>
+			<td class="td3">
+<code>
+function extend2(Child, Parent) {
+	var p = Parent.prototype;
+	var c = Child.prototype;
+	for (var i in p) {
+		c[i] = p[i];
+	}
+	c.uber = p;
+}
+</code>
+			</td>
+			<td class="td4">
+				<ul>
+					<li>基于构造器工作模式</li>
+					<li>拷贝属性模式</li>
+					<li>使用原型模式</li>
+				</ul>
+			</td>
+			<td class="td5">
+				<ul>
+					<li>将父对象原形中的内容全部转换成子对象原型属性。</li>
+					<li>无须为继承单独创建对象实例。</li>
+					<li>原型链本身也更短。</li>
+				</ul>
+			</td>
 		</tr>
 		<tr>
 			<td class="td1">5</td>
-			<td class="td2"></td>
-			<td class="td3"></td>
-			<td class="td4"></td>
-			<td class="td5"></td>
+			<td class="td2">全属性拷贝法（即浅拷贝法）</td>
+			<td class="td3">
+<code>
+function extendCopy(p) {
+	var c = {};
+	for (var i in p) {
+		c[i] = p[i];
+	}
+	c.uber = p;
+	return c;
+}
+</code>
+			</td>
+			<td class="td4">
+				<ul>
+					<li>基于对象工作模式</li>
+					<li>属性拷贝模式</li>
+				</ul>
+			</td>
+			<td class="td5">
+				<ul>
+					<li>非常简单。</li>
+					<li>没有使用原型属性。</li>
+				</ul>
+			</td>
 		</tr>
 		<tr>
 			<td class="td1">6</td>
-			<td class="td2"></td>
-			<td class="td3"></td>
-			<td class="td4"></td>
-			<td class="td5"></td>
+			<td class="td2">深拷贝法</td>
+			<td class="td3">
+				同上，只需在遇到对象类型时重复调用上述函数即可
+			</td>
+			<td class="td4">
+				<ul>
+					<li>基于对象工作模式</li>
+					<li>属性拷贝模式</li>
+				</ul>
+			</td>
+			<td class="td5">
+				<ul>
+					<li>与方法5基本相同，但所有对象执行的都是值传递。</li>
+				</ul>
+			</td>
 		</tr>
 		<tr>
 			<td class="td1">7</td>
-			<td class="td2"></td>
-			<td class="td3"></td>
-			<td class="td4"></td>
-			<td class="td5"></td>
+			<td class="td2">原型链继承法</td>
+			<td class="td3">
+<code>
+function object(o) {
+	function F() {}
+	F.prototype = o;
+	return new F();
+}
+</code>
+			</td>
+			<td class="td4">
+				<ul>
+					<li>基于对象工作模式</li>
+					<li>使用原型链模式</li>
+				</ul>
+			</td>
+			<td class="td5">
+				<ul>
+					<li>丢开仿类机制，直接在对象之间构建继承关系。</li>
+					<li>发挥原形固有优势。</li>
+				</ul>
+			</td>
 		</tr>
 		<tr>
 			<td class="td1">8</td>
-			<td class="td2"></td>
-			<td class="td3"></td>
-			<td class="td4"></td>
-			<td class="td5"></td>
+			<td class="td2">拓展与增强模式</td>
+			<td class="td3">
+<code>
+function objectPlus(o, stuff) {
+	var n;
+	function F() {}
+	F.prototype = o;
+	n = new F();
+	n.uber = o;
+	for (var i in stuff) {
+		n[i] = stuff[i];
+	}
+	return n;
+}
+</code>
+			</td>
+			<td class="td4">
+				<ul>
+					<li>基于对象工作模式</li>
+					<li>使用原型链模式</li>
+					<li>属性拷贝模式</li>
+				</ul>
+			</td>
+			<td class="td5">
+				<ul>
+					<li>该方法实际上是圆形继承法（方法7）和属性拷贝法（方法5）的混合应用。</li>
+					<li>它通过一个函数一次性完成对象的继承与拓展。</li>
+				</ul>
+			</td>
 		</tr>
 		<tr>
 			<td class="td1">9</td>
-			<td class="td2"></td>
-			<td class="td3"></td>
-			<td class="td4"></td>
-			<td class="td5"></td>
+			<td class="td2">多重继承法</td>
+			<td class="td3">
+<code>
+function multi() {
+	var n = {}, stuff, j = 0,
+	len = arguments.length;
+	for (j = 0; i < len; ++j) {
+		stuff = arguments[j];
+		for (var i in stuff) {
+			n[i] = stuff[i];
+		}
+	}
+	return n;
+}
+</code>
+			</td>
+			<td class="td4">
+				<ul>
+					<li>基于对象工作模式</li>
+					<li>属性拷贝模式</li>
+				</ul>
+			</td>
+			<td class="td5">
+				<ul>
+					<li>一种混合插入式继承实现。</li>
+					<li>它会按照父对象的出现顺序依次对它们执行属性全拷贝。</li>
+				</ul>
+			</td>
 		</tr>
 		<tr>
 			<td class="td1">10</td>
-			<td class="td2"></td>
-			<td class="td3"></td>
-			<td class="td4"></td>
-			<td class="td5"></td>
+			<td class="td2">寄生继承法</td>
+			<td class="td3">
+<code>
+function parasite(victim) {
+	var that = object(victim);
+	that.more = 1; //other more attr
+	return that;
+}
+</code>
+			</td>
+			<td class="td4">
+				<ul>
+					<li>基于对象工作模式</li>
+					<li>使用原型链模式</li>
+				</ul>
+			</td>
+			<td class="td5">
+				<ul>
+					<li>该方法通过一个类似构造器的函数来创建对象。</li>
+					<li>该函数会执行相应的对象拷贝，并对其进行扩展，然后返回该拷贝。</li>
+				</ul>
+			</td>
 		</tr>
 		<tr>
 			<td class="td1">11</td>
-			<td class="td2"></td>
-			<td class="td3"></td>
-			<td class="td4"></td>
-			<td class="td5"></td>
+			<td class="td2">构造器借用法</td>
+			<td class="td3">
+<code>
+function Child() {
+	Parent.apply(this, arguments);
+}
+</code>
+			</td>
+			<td class="td4">
+				<ul>
+					<li>基于构造器工作模式</li>
+				</ul>
+			</td>
+			<td class="td5">
+				<ul>
+					<li>该方法可以只继承父对象的自身属性。</li>
+					<li>可以与方法1结合使用，以便从原形中继承相关内容。</li>
+					<li>它便于我们的子对象继承某个对象的具体属性（并且还有可能是引用类属性）时，选择最简单的处理方式。</li>
+				</ul>
+			</td>
 		</tr>
 		<tr>
 			<td class="td1">12</td>
-			<td class="td2"></td>
-			<td class="td3"></td>
-			<td class="td4"></td>
-			<td class="td5"></td>
-		</tr>
-		<tr>
-			<td class="td1">13</td>
-			<td class="td2"></td>
-			<td class="td3"></td>
-			<td class="td4"></td>
-			<td class="td5"></td>
+			<td class="td2">构造器借用与属性拷贝法</td>
+			<td class="td3">
+<code>
+function Child() {
+	Parent.apply(this, arguments);
+}
+extend2(Child, Parent);
+</code>
+			</td>
+			<td class="td4">
+				<ul>
+					<li>使用构造器工作模式</li>
+					<li>使用原型链模式</li>
+					<li>属性拷贝模式</li>
+				</ul>
+			</td>
+			<td class="td5">
+				<ul>
+					<li>该方法是方法11与方法4的结合体。</li>
+					<li>它允许我们在不重复调用父对象构造器的情况下同时继承其自身属性和原形属性。</li>
+				</ul>
+			</td>
 		</tr>
 	</table>
 </body>
