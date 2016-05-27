@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" name="viewport" content="width=device-width" />
+	<title>songzhj</title>
+	<style type="text/css">
+		table {
+			position: relative;
+			width: 90%;
+			margin: 10px auto;
+			border-collapse: collapse;
+			border-bottom: 1px solid #000;
+		}
+		table caption {
+			font-size: 1.4em;
+			font-weight: border;
+		}
+		td, th {
+			border: 1px solid #000;
+			border-bottom-width: 0px; 
+			min-height: 15px;
+		}
+		.td1 {
+			width: 8%;
+			text-align: center;
+		}
+		.td2 {
+			width: 8%;
+		}
+		.td3 {
+			width: 35%;
+		}
+		.td4 {
+			width: 14%;
+		}
+		.td5 {
+			width: 25%;
+		}
+		table::after {
+			position: absolute;
+			bottom: -15px;
+			right: 0px;
+			display: block;
+			width: 190px;
+			height: 12px;
+			line-height: 12px;
+			font-size: 12px;
+			color: #888;
+			content: "@Javascript面向对象编程指南(2ed)";
+		}
+		ul {
+			margin-left: -20px;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<caption align="top">Javascript继承总结</caption>
+		<tr>
+			<th>编号</th>
+			<th>方法名称</th>
+			<th>代码示例</th>
+			<th>所属模式</th>
+			<th>注解</th>
+		</tr>
+		<tr>
+			<td class="td1">1</td>
+			<td class="td2">原型链法（伪传统）</td>
+			<td class="td3">
+				<code>Child.Prototype = new Parent();</code>
+			</td>
+			<td class="td4">
+				<ul>
+					<li>基于构造器工作的模式</li>
+					<li>使用原型链模式</li>
+				</ul>
+			</td>
+			<td class="td5">
+				<ul>
+					<li>默认继承机制</li>
+					<li>提示：我们可以将方法与属性集中可重用的部分迁移到原型链中，而将不可重用的那部分设置为对象的自身属性。</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td class="td1">2</td>
+			<td class="td2">仅从原型继承法</td>
+			<td class="td3">
+				<code>Child.prototype = Parent.prototype;</code>
+			</td>
+			<td class="td4">
+				<ul>
+					<li>基于构造器的工作模式</li>
+					<li>原型拷贝模式（不存在原型链，所有的对象共享一个原型对象）</li>
+				</ul>
+			</td>
+			<td class="td5">
+				<ul>
+					<li>由于该模式在构建继承关系时不需要新建对象实例，效率上会有较好的表现。</li>
+					<li>原型链上的查询也会比较快，因为这里根本不存在链。</li>
+					<li>缺点在于，对于对象的修改会影响其父对象。</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td class="td1">3</td>
+			<td class="td2"></td>
+			<td class="td3"></td>
+			<td class="td4"></td>
+			<td class="td5"></td>
+		</tr>
+		<tr>
+			<td class="td1">4</td>
+			<td class="td2"></td>
+			<td class="td3"></td>
+			<td class="td4"></td>
+			<td class="td5"></td>
+		</tr>
+		<tr>
+			<td class="td1">5</td>
+			<td class="td2"></td>
+			<td class="td3"></td>
+			<td class="td4"></td>
+			<td class="td5"></td>
+		</tr>
+		<tr>
+			<td class="td1">6</td>
+			<td class="td2"></td>
+			<td class="td3"></td>
+			<td class="td4"></td>
+			<td class="td5"></td>
+		</tr>
+		<tr>
+			<td class="td1">7</td>
+			<td class="td2"></td>
+			<td class="td3"></td>
+			<td class="td4"></td>
+			<td class="td5"></td>
+		</tr>
+		<tr>
+			<td class="td1">8</td>
+			<td class="td2"></td>
+			<td class="td3"></td>
+			<td class="td4"></td>
+			<td class="td5"></td>
+		</tr>
+		<tr>
+			<td class="td1">9</td>
+			<td class="td2"></td>
+			<td class="td3"></td>
+			<td class="td4"></td>
+			<td class="td5"></td>
+		</tr>
+		<tr>
+			<td class="td1">10</td>
+			<td class="td2"></td>
+			<td class="td3"></td>
+			<td class="td4"></td>
+			<td class="td5"></td>
+		</tr>
+		<tr>
+			<td class="td1">11</td>
+			<td class="td2"></td>
+			<td class="td3"></td>
+			<td class="td4"></td>
+			<td class="td5"></td>
+		</tr>
+		<tr>
+			<td class="td1">12</td>
+			<td class="td2"></td>
+			<td class="td3"></td>
+			<td class="td4"></td>
+			<td class="td5"></td>
+		</tr>
+		<tr>
+			<td class="td1">13</td>
+			<td class="td2"></td>
+			<td class="td3"></td>
+			<td class="td4"></td>
+			<td class="td5"></td>
+		</tr>
+	</table>
+</body>
+</html>

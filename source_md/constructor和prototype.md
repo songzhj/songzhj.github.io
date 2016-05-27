@@ -1,0 +1,1 @@
+函数的prototype中有一个constructor属性，是指向构造函数F本身的，因此当这个构造函数实例化一个实例时，这个实例的constructor属性指向这个构造函数；当改变了构造函数的原型时，prototype.constructor也相应改变，因此实例化出的对象的constructor属性指向了别处，因此contructor.prototype === F.prototype的结果为false。
