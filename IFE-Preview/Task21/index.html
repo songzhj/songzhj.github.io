@@ -4,42 +4,65 @@
 	<meta charset="UTF-8">
 	<title>Task21</title>
 	<style type="text/css">
-		.wrap {
-			height: 60px;
-			width: 300px;
-			margin: 20px;
+		.clearfix:after {
+			content: "";
+			display: block;
+			clear: both;
 		}
-		.item {
-			height: 40px;
-			width: 40px;
-			margin: 10px;
+		.tag-favo-area {
+			width: 450px;
+			margin: auto;
+		}
+		.wrap {
+			height: auto;
+			width: 300px;
+		}
+		.tag-item,
+		.favo-item {
+			height: 25px;
+			width: auto;
+			margin: 5px;
+			padding: 2px 4px;
 			float: left;
 			color: white;
-			background-color: blue;
-			line-height: 40px;
-			font-size: 2em;
+			line-height: 25px;
+			font-size: 1.2em;
 			text-align: center;
+			cursor: pointer;
 		}
-		.input {
-			margin-top: 20px;
-			text-align: center;
+		.tag-item {
+			background-color: #69A9F9;
 		}
-		.match {
-			color: red;
+		.favo-item {
+			background-color: #7FFB1B;
+		}
+		.tag-item:hover {
+			background-color: red;
+		}
+		.tag-item:hover:before {
+			content: "删除";
 		}
 	</style>
 </head>
 <body>
-	<div class="input">
-		<span>Tag:</span><input type="text" id="tag-input" />
-		<div class="wrap" id="tag-wrap"></div>
-		<textarea id="favo-input" cols="30" rows="5"></textarea>
-		<button id="add-favo">添加兴趣</button>
-		<div class="wrap" id="favo-wrap"></div>
+	<div class="tag-favo-area">
+		<div class="tag-area">
+			<div class="input">
+				<span>Tag:</span><input type="text" id="tag-input" />
+			</div>
+			<div class="wrap clearfix" id="tag-wrap">
+			</div>
+		</div>
+		<div class="favo-area">
+			<div class="input">
+				<textarea id="favo-input" cols="30" rows="5"></textarea>
+				<button id="add-favo">添加兴趣</button>
+			</div>
+			<div class="wrap clearfix" id="favo-wrap">
+			</div>
+		</div>
 	</div>
-	<div id="wrap">
 
-	</div>
 	<script type="text/javascript" src="./index.js"></script>
 </body>
 </html>
