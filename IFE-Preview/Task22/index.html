@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task 22</title>
+	<style type="text/css">
+		* {
+			padding: 0px;
+			margin: 0px;
+		}
+
+		.container {
+			
+		}
+
+		.binary-tree {
+			display: inline-block;
+			border: 2px solid black;
+			margin: 10px 5px;
+			background-color: white;
+		}
+
+		.level-1 {
+			z-index: 101;
+		}
+
+		.level-2 {
+			z-index: 102;
+		}
+
+		.level-3 {
+			z-index: 103;
+		}
+
+		.level-4 {
+			width: 25px;
+			height: 20px;
+			z-index: 104;
+		}
+
+		.control {
+			margin: 20px;
+		}
+
+		.active {
+			background-color: blue;
+		}
+
+		.lock {
+			visibility: hidden;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div id="binary-tree-root" class="binary-tree level-1">
+			<div class="binary-tree level-2">
+				<div class="binary-tree level-3">
+					<div class="binary-tree level-4"></div>
+					<div class="binary-tree level-4"></div>
+				</div>
+				<div class="binary-tree level-3">
+					<div class="binary-tree level-4"></div>
+					<div class="binary-tree level-4"></div>
+				</div>
+			</div>
+			<div class="binary-tree level-2">
+				<div class="binary-tree level-3">
+					<div class="binary-tree level-4"></div>
+					<div class="binary-tree level-4"></div>
+				</div>
+				<div class="binary-tree level-3">
+					<div class="binary-tree level-4"></div>
+					<div class="binary-tree level-4"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="control" class="control">
+		<button id="pre-root" value="pre">先序</button>
+		<button id="mid-root" value="mid">中序</button>
+		<button id="last-root" value="last">后序</button>
+	</div>
+
+	<script type="text/javascript" src="./index.js"></script>
+</body>
+</html>
