@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task22</title>
+	<style type="text/css">
+		* {
+			padding: 0px;
+			margin: 0px;
+		}
+
+		.tree {
+			display: inline-block;
+			border: 2px solid black;
+			margin: 10px 5px;
+			background-color: white;
+		}
+
+		.level-1 {
+			z-index: 101;
+		}
+
+		.level-2 {
+			z-index: 102;
+		}
+
+		.level-3 {
+			z-index: 103;
+		}
+
+		.level-4 {
+			z-index: 104;
+		}
+
+		.level-5 {
+			z-index: 105;
+		}
+
+		.control {
+			margin: 20px;
+		}
+
+		.active {
+			background-color: blue;
+		}
+
+		.key {
+			background-color: red;
+		}
+
+		.lock {
+			visibility: hidden;
+		}
+	</style>
+</head>
+<body>
+	<div id="control" class="control">
+		<button id="traversal-tree">开始遍历</button>
+		<br/>
+		<input type="text" id="keyword"/>
+		<button id="traversal-and-match">遍历匹配</button>
+	</div>
+	<div class="container">
+		<div id="tree-root" class="level-1 tree" data-value="Super">
+			Super
+			<div class="level-2 tree" data-value="Apple">
+				Apple
+				<div class="level-3 tree" data-value="Pear">Pear</div>
+				<div class="level-3 tree" data-value="Pig">Pig</div>
+				<div class="level-3 tree" data-value="Cola">Cola</div>
+				<div class="level-3 tree" data-value="Soccer">Soccer</div>
+				<div class="level-3 tree" data-value="Phone">Phone</div>
+				<div class="level-3 tree" data-value="Book">Book</div>
+				<div class="level-3 tree" data-value="School">School</div>
+			</div>
+			<div class="level-2 tree" data-value="Note">
+				Note
+				<div class="level-3 tree" data-value="Human">
+					Human
+					<div class="level-4 tree" data-value="Code">Code</div>
+					<div class="level-4 tree" data-value="Operote">Operote</div>
+					<div class="level-4 tree" data-value="Man">Man</div>
+				</div>
+				<div class="level-3 tree" data-value="Program">
+					Program
+					<div class="level-4 tree" data-value="Bement">
+						Bement
+						<div class="level-5 tree" data-value="Cat">Cat</div>
+					</div>
+					<div class="level-4 tree" data-value="Glass">Glass</div>
+				</div>
+			</div>
+			<div class="level-2 tree" data-value="Fish">Fish</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="./index.js"></script>
+</body>
+</html>
