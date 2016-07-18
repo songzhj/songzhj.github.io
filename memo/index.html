@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Memo - songzhj</title>
+	<style type="text/css">
+		.container {
+			width: 100%;
+		}
+
+		.main {
+			position: relative;
+			left: 50%;
+			margin-left: -25%;
+			width: 50%;
+			border: 1px solid #000;
+			margin-top: 100px;
+		}
+		.item {
+			display: block;
+			margin: 10px 10px;
+			text-decoration: none;
+		}
+
+		.item:hover {
+			color: #000;
+			transition: all 0.5s ease 0s;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="main">
+			<a href="https://segmentfault.com/a/1190000004172052" class="item">Webpack常用功能介绍</a>
+			<a href="http://www.ydcss.com/archives/18" class="item">gulp详细入门教程</a>
+		</div>
+	</div>
+	<script type="text/javascript">
+		/*
+		 ** 右键点击超链接, 从新窗口打开
+		 */
+		 (function newWindowByRightClick() {document.addEventListener('contextmenu', function (e) {e.preventDefault();e.returnValue = false;if (e.target.nodeName.toLowerCase() === 'a') {var href = e.target.href;window.open(href);}});})();
+	</script>
+</body>
+</html>
