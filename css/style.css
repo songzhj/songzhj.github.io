@@ -5,17 +5,19 @@
 }
 
 body {
-	background-color: #cdcdcd;
+	background-image: url('../images/bg.jpg');
 	/*min-width: 400px;*/
 }
 
 .header {
 	position: fixed;
 	top: 0;
-	height: 60px;
-	line-height: 60px;
+	height: 52px;
+	line-height: 52px;
 	width: 100%;
-    	background-color: #000000;
+    background-color: #2CA6CB;
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0) 48%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0) 52%), linear-gradient(-45deg, rgba(0, 0, 0, 0) 48%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0) 52%);
+    background-size: 1em 1em;
 	border-color: #606061;
 	z-index: 5;
 }
@@ -28,16 +30,17 @@ body {
 .header address a {
 	font-size: 1.5em;
 	text-decoration: none;
-	color: #7BBBEE;
+	color: #FFF;
 }
 
 .body {
 	width:400px;
 	margin: 30px auto;
 	margin-top: 90px;
-	border: 1px solid #555;
  	border-radius: 17px;
- 	background-color: #DFDFDF;
+ 	background: #f8f8fd none repeat scroll 0 0;
+ 	border-bottom: 1px solid #b1b1b1;
+ 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 0 30px rgba(10, 10, 0, 0.1) inset;
 }
 
 @media screen and (max-width: 600px) {
@@ -47,12 +50,12 @@ body {
 }
 
 .body .note h3 {
-  	color:#ddd;
+  	color:#FFF;
   	text-align:left;
   	text-indent: 10px;
   	padding-left:5px; 
   	border-radius: 15px;
-  	background-color:#56c;
+  	background-color:rgba(44, 166, 203, 0.8);
 }
 
 .body .item {
@@ -63,13 +66,15 @@ body {
 
 .body .item a {
 	text-decoration: none;
-	color: black;
+	color: #000;
 	position: relative;
-	transition: color 0.3s linear 0s;
+	transition: all 0.3s linear 0s;
+	text-shadow: 5px 3px 3px rgba(0, 0, 0, 0.4);
 }
 
 .body .item a:hover {
 	color: #d59;
+	text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
 }
 
 .body .item a:after {
@@ -78,12 +83,12 @@ body {
 	left: 0;
 	content: "";
 	width: 0px;
-	border-bottom: 3px solid #67d;
+	border-bottom: 2px solid #67d;
 	transition: all 0.4s ease 0s;
 }
 
 .body .item a:hover:after {
-	border-bottom: 3px solid #67d;
+	border-bottom: 2px solid #67d;
 	width: 100%;
 }
 
