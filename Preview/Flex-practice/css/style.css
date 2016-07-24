@@ -1,0 +1,96 @@
+.one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.two {
+  display: flex;
+  justify-content: space-between;
+}
+
+.two .pip:nth-of-type(2) {
+  align-self: flex-end;
+}
+
+.three {
+  display: flex;
+  justify-content: space-between;
+}
+
+.three .pip:nth-of-type(2) {
+  align-self: center;
+}
+
+.three .pip:nth-of-type(3) {
+  align-self: flex-end;
+}
+
+.four,
+.six{
+  display: flex;
+  justify-content: space-between;
+}
+
+.four .col,
+.six .col{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.five {
+  display: flex;
+  justify-content: space-between;
+}
+
+.five .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.five .col:nth-of-type(2) {
+  justify-content: center;
+}
+
+.box {
+  margin: 16px;
+  padding: 6px;
+  
+  background-color: #e7e7e7;
+  width: 104px;
+  height: 104px;
+  object-fit: contain;
+  
+  box-shadow:
+    inset 0 5px white, 
+    inset 0 -5px #bbb,
+    inset 5px 0px #d7d7d7, 
+    inset -5px 0 #d7d7d7;
+  
+  border-radius: 10%;
+}
+
+.pip {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin: 4px;
+
+  background-color: #333;
+  box-shadow: inset 0 3px #111, inset 0 -3px #555;
+}
+
+html,
+body{
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
