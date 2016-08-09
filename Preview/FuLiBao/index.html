@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>微金所 - songzhj</title>
+	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<header id="header">
+			<div class="topbar visible-md visible-lg">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-2 text-center">
+							<a href="#" class="mobile-link">
+								<i class="icon-mobilephone"></i>
+								<span>XX福利宝</span>
+								<i class="glyphicon glyphicon-chevron-down"></i>
+								<img src="img/c_06.jpg" alt="扫一扫二维码" />
+							</a>
+						</div>
+						<div class="col-md-5 text-center">
+							<i class="icon-telephone"></i>
+							<span>400-xxx-xxx（24小时服务）</span>
+						</div>
+						<div class="col-md-3 text-center">
+							<a href="#" class="topbar-link">常见问题</a>
+							<a href="#" class="topbar-link">财富登陆</a>
+						</div>
+						<div class="col-md-2 text-center">
+							<a href="#" class="btn btn-register btn-sm">免费注册</a>
+							<a href="#" class="btn-link btn-sm topbar-link" data-toggle="modal" data-target="#login-form">登陆</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<nav class="navbar navbar-default navbar-static-top mynav" data-spy="affix" data-offset-top="90">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+						data-target="#nav-list" aria-expanded="false">
+						<span class="sr-only">切换菜单</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						</button>
+						<a href="#" class="navbar-brand nav-brand-link">
+							<i class="ico-logo"></i>
+							<span>福利宝</span>
+						</a>
+					</div>
+					<div class="collapse navbar-collapse" id="nav-list">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#">我要投资</a></li>
+							<li><a href="#">我要借款</a></li>
+							<li><a href="#">平台介绍</a></li>
+							<li><a href="#">新手专区</a></li>
+							<li><a href="#">最新动态</a></li>
+							<li><a href="#">微论坛</a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right hidden-sm">
+							<li><a href="#">个人中心</a></li>
+						</ul>
+					</div>	
+				</div>
+			</nav>
+	</header>
+	<section id="main-ad" class="carousel slide" data-ride="carousel">
+		<!-- 指示器 -->
+		<ol class="carousel-indicators">
+			<li data-target="#main-ad" data-slide-to="0" class="active"></li>
+			<li data-target="#main-ad" data-slide-to="1"></li>
+			<li data-target="#main-ad" data-slide-to="2"></li>
+			<li data-target="#main-ad" data-slide-to="3"></li>
+		</ol>
+
+		<!-- 轮播的项目 -->
+		<div class="carousel-inner" role="listbox">
+			<div class="item active" data-img-lg="img/slide_01_2000x410.jpg" data-img-xs="img/slide_01_640x340.jpg"></div>
+			<div class="item" data-img-lg="img/slide_02_2000x410.jpg" data-img-xs="img/slide_02_640x340.jpg"></div>
+			<div class="item" data-img-lg="img/slide_03_2000x410.jpg" data-img-xs="img/slide_03_640x340.jpg"></div>
+			<div class="item" data-img-lg="img/slide_04_2000x410.jpg" data-img-xs="img/slide_04_640x340.jpg"></div>
+		</div>
+
+		<!-- 控制器 -->
+		<a class="left carousel-control" href="#main-ad" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#main-ad" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</section>
+	<section id="feature">
+		<div class="container hidden-xs">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<a href="#">
+						<div class="media">
+							<div class="media-left">
+								<i class="icon-uniE907"></i>
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">支付交易保障</h4>
+								<p>全程保障资金安全</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<a href="#">
+						<div class="media">
+							<div class="media-left">
+								<i class="icon-uniE907"></i>
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">平台财产安全</h4>
+								<p>国际领先的财产系统</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<a href="#">
+						<div class="media">
+							<div class="media-left">
+								<i class="icon-uniE907"></i>
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">交易安全</h4>
+								<p>理财保险承诺全程保障</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<a href="#">
+						<div class="media">
+							<div class="media-left">
+								<i class="icon-uniE907"></i>
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">安全保障</h4>
+								<p>独创安全保障机制</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<a href="#">
+						<div class="media">
+							<div class="media-left">
+								<i class="icon-uniE907"></i>
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">筛选优质资源</h4>
+								<p>对接上海资信征信系统</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<a href="#">
+						<div class="media">
+							<div class="media-left">
+								<i class="icon-uniE907"></i>
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">联合信息发布</h4>
+								<p>通过多种渠道发布指数报告</p>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="order">
+		<div class="container">
+			<p class="pull-left"><i class="icon-uniE906"></i>现在有<span>353</span>人在排队，累计预约交易成功<span>5409</span>次。 什么是预约投标？ <a href="#">立即预约</a></p>
+			<p class="pull-right hidden-sm hidden-xs"><a href="#"><i class="icon-uniE905"></i> 微金所企业宣传片</a></p>
+		</div>
+	</section>
+	<section id="product">
+		<div class="container">
+			<!-- tab -->
+			<div class="ul-wapper">
+				<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#tab-01" aria-controls="tab-01" role="tab" data-toggle="tab">特别推荐</a></li>
+					<li role="presentation"><a href="#tab-02" aria-controls="tab-02" role="tab" data-toggle="tab">微投资</a></li>
+					<li role="presentation"><a href="#tab-03" aria-controls="tab-03" role="tab" data-toggle="tab">微小宝</a></li>
+					<li role="presentation"><a href="#tab-04" aria-controls="tab-04" role="tab" data-toggle="tab">微消费</a></li>
+					<li role="presentation"><a href="#tab-05" aria-controls="tab-05" role="tab" data-toggle="tab">微福利</a></li>
+					<li class="pull-right hidden-xs"><a href="#">更多</a></li>
+				</ul>
+			</div>
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane fade in active" id="tab-01">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="panel panel-my active">
+								<div class="panel-heading">
+									<p><span>8</span><sub>%</sub></p>年利率
+								</div>
+								<div class="panel-body">
+									<h4>新手体验102期</h4>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="panel panel-my">
+								<div class="panel-heading">
+									<p class="tooltips">
+										<a class="badge" title="上海市" data-toggle="tooltip" data-placement="top" href="#">沪</a>
+										<a class="badge" title="北京市" data-toggle="tooltip" data-placement="top" href="#">京</a>
+									</p>
+									<p><span>8</span><sub>%</sub></p>年利率
+								</div>
+								<div class="panel-body">
+									<h4>新手体验102期</h4>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="panel panel-my">
+								<div class="panel-heading">
+									<p><span>8</span><sub>%</sub></p>年利率
+								</div>
+								<div class="panel-body">
+									<h4>新手体验102期</h4>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="panel panel-my">
+								<div class="panel-heading">
+									<p><span>8</span><sub>%</sub></p>年利率
+								</div>
+								<div class="panel-body">
+									<h4>新手体验102期</h4>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="panel panel-my disabled">
+								<div class="panel-heading">
+									<p><span>8</span><sub>%</sub></p>年利率
+								</div>
+								<div class="panel-body">
+									<h4>新手体验102期</h4>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="panel panel-my disabled">
+								<div class="panel-heading">
+									<p><span>8</span><sub>%</sub></p>年利率
+								</div>
+								<div class="panel-body">
+									<h4>新手体验102期</h4>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div role="tabpanel" class="tab-pane fade" id="tab-02">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="panel panel-my active">
+								<div class="panel-heading">
+									<p><span>8</span><sub>%</sub></p>年利率
+								</div>
+								<div class="panel-body">
+									<h4>新手体验102期</h4>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="panel panel-my active">
+								<div class="panel-heading">
+									<p><span>8</span><sub>%</sub></p>年利率
+								</div>
+								<div class="panel-body">
+									<h4>新手体验102期</h4>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="panel panel-my">
+								<div class="panel-heading">
+									<p><span>8</span><sub>%</sub></p>年利率
+								</div>
+								<div class="panel-body">
+									<h4>新手体验102期</h4>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="panel panel-my">
+								<div class="panel-heading">
+									<p><span>8</span><sub>%</sub></p>年利率
+								</div>
+								<div class="panel-body">
+									<h4>新手体验102期</h4>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="panel panel-my disabled">
+								<div class="panel-heading">
+									<p><span>8</span><sub>%</sub></p>年利率
+								</div>
+								<div class="panel-body">
+									<h4>新手体验102期</h4>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="panel panel-my disabled">
+								<div class="panel-heading">
+									<p><span>8</span><sub>%</sub></p>年利率
+								</div>
+								<div class="panel-body">
+									<h4>新手体验102期</h4>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div role="tabpanel" class="tab-pane fade" id="tab-03">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="panel panel-my active">
+								<div class="panel-heading">
+									<p><span>8</span><sub>%</sub></p>年利率
+								</div>
+								<div class="panel-body">
+									<h4>新手体验102期</h4>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="panel panel-my">
+								<div class="panel-heading">
+									<p><span>8</span><sub>%</sub></p>年利率
+								</div>
+								<div class="panel-body">
+									<h4>新手体验102期</h4>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="panel panel-my disabled">
+								<div class="panel-heading">
+									<p><span>8</span><sub>%</sub></p>年利率
+								</div>
+								<div class="panel-body">
+									<h4>新手体验102期</h4>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="panel panel-my disabled">
+								<div class="panel-heading">
+									<p><span>8</span><sub>%</sub></p>年利率
+								</div>
+								<div class="panel-body">
+									<h4>新手体验102期</h4>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="panel panel-my disabled">
+								<div class="panel-heading">
+									<p><span>8</span><sub>%</sub></p>年利率
+								</div>
+								<div class="panel-body">
+									<h4>新手体验102期</h4>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="panel panel-my disabled">
+								<div class="panel-heading">
+									<p><span>8</span><sub>%</sub></p>年利率
+								</div>
+								<div class="panel-body">
+									<h4>新手体验102期</h4>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div role="tabpanel" class="tab-pane fade" id="tab-04">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="panel panel-my active">
+								<div class="panel-heading">
+									<p><span>8</span><sub>%</sub></p>年利率
+								</div>
+								<div class="panel-body">
+									<h4>新手体验102期</h4>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="panel panel-my active">
+								<div class="panel-heading">
+									<p><span>8</span><sub>%</sub></p>年利率
+								</div>
+								<div class="panel-body">
+									<h4>新手体验102期</h4>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="panel panel-my">
+								<div class="panel-heading">
+									<p><span>8</span><sub>%</sub></p>年利率
+								</div>
+								<div class="panel-body">
+									<h4>新手体验102期</h4>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="panel panel-my">
+								<div class="panel-heading">
+									<p><span>8</span><sub>%</sub></p>年利率
+								</div>
+								<div class="panel-body">
+									<h4>新手体验102期</h4>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="panel panel-my disabled">
+								<div class="panel-heading">
+									<p><span>8</span><sub>%</sub></p>年利率
+								</div>
+								<div class="panel-body">
+									<h4>新手体验102期</h4>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="panel panel-my disabled">
+								<div class="panel-heading">
+									<p><span>8</span><sub>%</sub></p>年利率
+								</div>
+								<div class="panel-body">
+									<h4>新手体验102期</h4>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div role="tabpanel" class="tab-pane fade" id="tab-05">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="panel panel-my active">
+								<div class="panel-heading">
+									<p><span>8</span><sub>%</sub></p>年利率
+								</div>
+								<div class="panel-body">
+									<h4>新手体验102期</h4>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="panel panel-my avtive">
+								<div class="panel-heading">
+									<p><span>8</span><sub>%</sub></p>年利率
+								</div>
+								<div class="panel-body">
+									<h4>新手体验102期</h4>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="panel panel-my">
+								<div class="panel-heading">
+									<p><span>8</span><sub>%</sub></p>年利率
+								</div>
+								<div class="panel-body">
+									<h4>新手体验102期</h4>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="panel panel-my">
+								<div class="panel-heading">
+									<p><span>8</span><sub>%</sub></p>年利率
+								</div>
+								<div class="panel-body">
+									<h4>新手体验102期</h4>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="panel panel-my disabled">
+								<div class="panel-heading">
+									<p><span>8</span><sub>%</sub></p>年利率
+								</div>
+								<div class="panel-body">
+									<h4>新手体验102期</h4>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="panel panel-my disabled">
+								<div class="panel-heading">
+									<p><span>8</span><sub>%</sub></p>年利率
+								</div>
+								<div class="panel-body">
+									<h4>新手体验102期</h4>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-left"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+									<div class="row col-xs-6 text-right"><p>起始金额</p><p><span>1.01</span><sub>万</sub></p></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="news">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-2 col-sm-offset-2">
+					<div class="news-title">
+						全部新闻
+					</div>
+				</div>
+				<div class="col-sm-2">
+					<ul class="nav nav-pills nav-stacked">
+					  <li role="presentation" class="active"><a href="#news01" data-toggle="tab" role="tab" data-title="全部新闻"><i class="icon-news01"></i></a></li>
+					  <li role="presentation"><a href="#news02" data-toggle="tab" role="tab" data-title="行业资讯"><i class="icon-news02"></i></a></li>
+					  <li role="presentation"><a href="#news03" data-toggle="tab" role="tab" data-title="最新快报"><i class="icon-news03"></i></a></li>
+					  <li role="presentation"><a href="#news04" data-toggle="tab" role="tab" data-title="金融走势"><i class="icon-news04"></i></a></li>
+					</ul>
+				</div>
+				<div class="col-sm-6">
+					<div class="tab-content">
+					  <div role="tabpanel" class="tab-pane fade in active" id="news01">
+					  	<ul>
+					  		<li><a href="#">【新闻】2016年8月，吉林大学北一熄灯了</a></li>
+					  		<li><a href="#">【新闻】2016年8月，吉林大学北一熄灯了</a></li>
+					  		<li><a href="#">【新闻】2016年8月，吉林大学北一熄灯了</a></li>
+					  		<li><a href="#">【新闻】2016年8月，吉林大学北一熄灯了</a></li>
+					  		<li><a href="#">【新闻】2016年8月，吉林大学北一熄灯了</a></li>
+					  		<li><a href="#">【新闻】2016年8月，吉林大学北一熄灯了</a></li>
+					  		<li><a href="#">【新闻】2016年8月，吉林大学北一熄灯了</a></li>
+					  		<li><a href="#">【新闻】2016年8月，吉林大学北一熄灯了</a></li>
+					  	</ul>
+					  </div>
+					  <div role="tabpanel" class="tab-pane fade" id="news02">
+					  	<ul>
+					  		<li><a href="#">【资讯】2016年8月，吉林大学北一熄灯了</a></li>
+					  		<li><a href="#">【资讯】2016年8月，吉林大学北一熄灯了</a></li>
+					  		<li><a href="#">【资讯】2016年8月，吉林大学北一熄灯了</a></li>
+					  		<li><a href="#">【资讯】2016年8月，吉林大学北一熄灯了</a></li>
+					  		<li><a href="#">【资讯】2016年8月，吉林大学北一熄灯了</a></li>
+					  		<li><a href="#">【资讯】2016年8月，吉林大学北一熄灯了</a></li>
+					  		<li><a href="#">【资讯】2016年8月，吉林大学北一熄灯了</a></li>
+					  		<li><a href="#">【资讯】2016年8月，吉林大学北一熄灯了</a></li>
+					  	</ul>
+					  </div>
+					  <div role="tabpanel" class="tab-pane fade" id="news03">
+					  	<ul>
+					  		<li><a href="#">【新鲜】2016年8月，吉林大学北一熄灯了</a></li>
+					  		<li><a href="#">【新鲜】2016年8月，吉林大学北一熄灯了</a></li>
+					  		<li><a href="#">【新鲜】2016年8月，吉林大学北一熄灯了</a></li>
+					  		<li><a href="#">【新鲜】2016年8月，吉林大学北一熄灯了</a></li>
+					  		<li><a href="#">【新鲜】2016年8月，吉林大学北一熄灯了</a></li>
+					  		<li><a href="#">【新鲜】2016年8月，吉林大学北一熄灯了</a></li>
+					  		<li><a href="#">【新鲜】2016年8月，吉林大学北一熄灯了</a></li>
+					  		<li><a href="#">【新鲜】2016年8月，吉林大学北一熄灯了</a></li>
+					  	</ul>
+					  </div>
+					  <div role="tabpanel" class="tab-pane fade" id="news04">
+					  	<ul>
+					  		<li><a href="#">【行情】2016年8月，吉林大学北一熄灯了</a></li>
+					  		<li><a href="#">【行情】2016年8月，吉林大学北一熄灯了</a></li>
+					  		<li><a href="#">【行情】2016年8月，吉林大学北一熄灯了</a></li>
+					  		<li><a href="#">【行情】2016年8月，吉林大学北一熄灯了</a></li>
+					  		<li><a href="#">【行情】2016年8月，吉林大学北一熄灯了</a></li>
+					  		<li><a href="#">【行情】2016年8月，吉林大学北一熄灯了</a></li>
+					  		<li><a href="#">【行情】2016年8月，吉林大学北一熄灯了</a></li>
+					  		<li><a href="#">【行情】2016年8月，吉林大学北一熄灯了</a></li>
+					  	</ul>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="partner">
+		<div class="container text-center hidden-sm hidden-xs">
+			<h3>合作伙伴</h3>
+			<ul class="center-block">
+				<li><a href="#"><i class="icon-uniE930"></i></a></li>
+				<li><a href="#"><i class="icon-uniE92F"></i></a></li>
+				<li><a href="#"><i class="icon-uniE92E"></i></a></li>
+				<li><a href="#"><i class="icon-uniE92A"></i></a></li>
+				<li><a href="#"><i class="icon-uniE929"></i></a></li>
+				<li><a href="#"><i class="icon-uniE931"></i></a></li>
+				<li><a href="#"><i class="icon-uniE92C"></i></a></li>
+				<li><a href="#"><i class="icon-uniE92B"></i></a></li>
+				<li><a href="#"><i class="icon-uniE92D"></i></a></li>
+			</ul>
+		</div>
+	</section>
+	<footer id="footer">
+		<div class="container">
+			<ul>
+				<li>©songzhj 2016</li>
+				<li>这是一个练手的页面，相关内容资源来自互联网，侵删。</li>
+			</ul>
+		</div>
+	</footer>
+
+	<!-- 登陆模态框 -->
+	<div class="modal fade" id="login-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">登陆</h4>
+	      </div>
+	      <div class="modal-body">
+	        <form class="form-horizontal">
+	          <div class="form-group">
+	            <label for="user-id" class="col-sm-2 control-label">用户名</label>
+	            <div class="col-sm-10">
+	              <input type="text" class="form-control" id="user-id" placeholder="请输入用户名">
+	            </div>
+	          </div>
+	          <div class="form-group">
+	            <label for="password" class="col-sm-2 control-label">密码</label>
+	            <div class="col-sm-10">
+	              <input type="password" class="form-control" id="password" placeholder="请输入密码">
+	            </div>
+	          </div>
+	          <div class="form-group">
+	            <div class="col-sm-offset-2 col-sm-10">
+	              <div class="checkbox">
+	                <label>
+	                  <input type="checkbox"> 自动登陆
+	                </label>
+	              </div>
+	            </div>
+	          </div>
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+	        <button type="button" class="btn btn-primary">登陆</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- end 登陆模态框 -->
+	<script type="text/javascript" src="lib/jquery/jquery.js"></script>
+	<script type="text/javascript" src="lib/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
