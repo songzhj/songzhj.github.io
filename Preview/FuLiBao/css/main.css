@@ -331,7 +331,6 @@ body {
 #product > .container > .ul-wapper > .nav-tabs > li > a:hover {
 	background-color: transparent;
 	border-color: transparent;
-	border-bottom: 4px solid #e92322;
 	color: #333;
 }
 
