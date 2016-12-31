@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+	<title>Timer</title>
+	<style type="text/css">
+		.container {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			text-align: center;
+		}
+
+		.des {
+			position: absolute;
+			top: 20%;
+			margin-top: -50px;
+			left: 50%;
+			margin-left: -150px;
+			width: 300px;
+			height: 100px;
+			line-height: 50px;
+			font-size: 50px;
+			color: #C59D0A;
+		}
+
+		#year {
+			color: #7C7C7C;
+		}
+
+		#timer {
+			color: red;
+			font-size: 70px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="des">
+			<p>距<span id="year"></span>年:</p>
+			<p id="timer"></p>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var $nextYear = document.getElementById("year");
+		var $timer = document.getElementById("timer");
+		var now = new Date();
+		var thisYear = now.getFullYear();
+		var nextYear = thisYear - 0 + 1;
+		$nextYear.innerHTML = nextYear;
+		var last = new Date(nextYear + "-01-01 00:00:00") - new Date();
+		var timer = function () {
+			setTimeout(function() {
+				var ss = last / 1000;
+				var h = Math.floor(ss / 60 / 60);
+				var m = Math.floor(ss / 60 % 60);
+				var s = Math.floor(ss % 60);
+				$timer.innerHTML = (h < 10 ? "0" + h : h) + ":" + (m < 10 ? "0" + m : m) + ":" + (s < 10 ? "0" + s : s);
+				last -= 1000;
+				timer();
+			}, 1000);
+		}
+		timer();
+	</script>
+</body>
+</html>
