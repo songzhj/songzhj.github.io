@@ -12,9 +12,9 @@ Javascript语言的执行环境是"单线程",如果有多个任务，就必须�
 异步编程最基本的方法。
 ```javascript
 function f1(callback) {
-	setTimeout(function() {
-		callback();
-	}, 2000);
+    setTimeout(function() {
+        callback();
+    }, 2000);
 }
 ```
 缺点：耦合度高，不利于代码维护；而且每个任务只能指定一个回调函数。
@@ -25,9 +25,9 @@ function f1(callback) {
 f1.on('wtf', f2);
 
 function f1() {
-	setTimeout(function() {
-		f1.trigger('wtf');
-	}, 2000);
+    setTimeout(function() {
+        f1.trigger('wtf');
+    }, 2000);
 }
 ```
 能够去耦合，但是整个程序都变成了事件驱动，运行流程会变得很不清晰，不符合人脑习惯（顺序）。
@@ -36,16 +36,16 @@ function f1() {
 CommongJS提出的规范，现在已经被纳入ES6标准。目的是为异步编程提供统一接口。
 ```javascript
 function f1(...args) {
-	return new Promise(function(resolve, reject) {
-		//do something
-		ajax.get.apply(ajax, args.concat([function(data) {
-			if (data.status == 1) {
-				resolve(data);
-			} else {
-				reject(data);
-			}
-		}]));
-	});
+    return new Promise(function(resolve, reject) {
+        //do something
+        ajax.get.apply(ajax, args.concat([function(data) {
+            if (data.status == 1) {
+                resolve(data);
+            } else {
+                reject(data);
+            }
+        }]));
+    });
 }
 
 f1('/flight/air', {from: '北京', arrive: '上海'})
